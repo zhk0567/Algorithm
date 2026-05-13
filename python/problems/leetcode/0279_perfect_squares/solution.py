@@ -1,0 +1,22 @@
+"""LeetCode 279: Perfect Squares."""
+
+from __future__ import annotations
+
+
+class Solution:
+    def numSquares(self, n: int) -> int:
+        dp = [0] + [n + 1] * n
+        for i in range(1, n + 1):
+            j = 1
+            while j * j <= i:
+                if dp[i - j * j] + 1 < dp[i]:
+                    dp[i] = dp[i - j * j] + 1
+                j += 1
+        return dp[n]
+
+
+if __name__ == "__main__":
+    assert Solution().numSquares(12) == 3
+    assert Solution().numSquares(13) == 2
+    assert Solution().numSquares(1) == 1
+    print("0279 OK")

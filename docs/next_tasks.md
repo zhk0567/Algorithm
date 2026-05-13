@@ -47,7 +47,7 @@
 ## 第三阶段：`problems/` 刷题归档（进行中）
 
 - [x] 以 **LeetCode** 为主线：按 `000x_name/` 增量添加，`README.md` 对齐 [problem_template.md](problem_template.md) 结构
-- [x] 维护 `problems/hot100/README.md` 索引表与 `leetcode/` 实题目录对应（当前 9 题索引，持续扩充）
+- [x] 维护 `problems/hot100/README.md` 索引表与 `leetcode/` 实题目录对应（**Hot 100 已全部铺完**：99 题 Python+C++，LC 175 为 SQL-only）
 - [x] `offer/`、`nowcoder/`、`codetop/`、`luogu/` 已写目录级 `README` 命名约定（子题待刷时添加）
 
 ---

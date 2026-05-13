@@ -1,4 +1,4 @@
-# 学习路线图
+﻿# 学习路线图
 
 > 可按个人节奏调整；与 `python/`、`cpp/` 下同构目录对应。
 
@@ -30,4 +30,4 @@
 
 - `data_structures/`：第一阶段已铺全（Python + C++）
 - `algorithms/`：第二阶段已铺全（Python + C++），见各子目录 README 与入口源码
-- `problems/leetcode/`：第三阶段已启动，Hot 100 索引见 `problems/hot100/README.md`，可按模板持续加题
+- `problems/leetcode/`：第三阶段已启动，Hot 100 索引见 `problems/hot100/GUIDE.md`，可按模板持续加题

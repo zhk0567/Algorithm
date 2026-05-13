@@ -1,4 +1,4 @@
-# 后续任务清单
+﻿# 后续任务清单
 
 > 对照仓库骨架：`data_structures/` 第一阶段已铺完；以下按 **推荐推进顺序** 排列，可按个人节奏勾选。
 
@@ -8,13 +8,13 @@
 
 - [ ] 本机安装 **MinGW-w64** 或 **LLVM**，将 `g++` / `clang++` 加入 `PATH`，在 `cpp/data_structures/**` 与各 `README` 命令下做一次全量编译冒烟
 - [ ] 若长期只用 **MSVC**：为 `cpp/` 增加「无 `bits/stdc++.h`」的可选实现或统一改为标准头文件（工作量较大，单列里程碑）
-- [ ] 在根 `README.md` 的「进度」区同步：数据结构已完成、算法/刷题完成度（避免与现状矛盾）
+- [ ] 在根 `GUIDE.md` 的「进度」区同步：数据结构已完成、算法/刷题完成度（避免与现状矛盾）
 
 ---
 
 ## 第二阶段：`algorithms/` 全目录填充（Python + C++ 同构）（已完成）
 
-每个叶子目录已具备 `README.md` + 双语言示例（末尾自测），索引见 [python/algorithms/README.md](../python/algorithms/README.md)。
+每个叶子目录已具备 `GUIDE.md` + 双语言示例（末尾自测），索引见 [python/algorithms/GUIDE.md](../python/algorithms/GUIDE.md)。
 
 ### 排序与查找
 
@@ -44,23 +44,24 @@
 
 ---
 
-## 第三阶段：`problems/` 刷题归档（进行中）
+## 第三阶段：`problems/` 刷题归档（Hot 100 已完成；其余题单按需扩展）
 
-- [x] 以 **LeetCode** 为主线：按 `000x_name/` 增量添加，`README.md` 对齐 [problem_template.md](problem_template.md) 结构
-- [x] 维护 `problems/hot100/README.md` 索引表与 `leetcode/` 实题目录对应（**Hot 100 已全部铺完**：99 题 Python+C++，LC 175 为 SQL-only）
+- [x] 以 **LeetCode** 为主线：按 `000x_name/` 增量添加，`GUIDE.md` 对齐 [problem_template.md](problem_template.md) 结构
+- [x] 维护 `problems/hot100/GUIDE.md` 索引表与 `leetcode/` 实题目录对应（**Hot 100 已全部铺完**：99 题 Python+C++，LC 175 为 SQL-only）
 - [x] `offer/`、`nowcoder/`、`codetop/`、`luogu/` 已写目录级 `README` 命名约定（子题待刷时添加）
 
 ---
 
-## 第四阶段：`interview/`
+## 第四阶段：`interview/`（已铺首批）
 
-- [ ] `interview/classic/`：手写 LRU（可与 `data_structures/advanced` 对照）、线程安全队列等专题
-- [ ] `interview/top_frequent/`：高频表 + 链回 `problems/leetcode/`
+- [x] `interview/classic/`：LRU、LFU、线程安全有界队列、单例、令牌桶（Python + C++ 同构 + README）
+- [x] `interview/top_frequent/`：按专题高频表 + 链回 `problems/leetcode/`（与 Hot 100 已收录题对齐）
 
 ---
 
 ## 文档与笔记
 
+- [x] [structure.md](structure.md)：仓库顶层与子树说明、脚本与命名约定入口
 - [ ] 更新 [roadmap.md](roadmap.md)：标明「数据结构已完成」与下一阶段入口
 - [ ] 扩充 [templates.md](templates.md)：从已实现的 DS/即将写的算法中抽取可粘贴模板
 - [ ] [complexity.md](complexity.md)：按你已覆盖的算法补充一行一算法速查（可选）
@@ -74,11 +75,6 @@
 
 ---
 
-## 建议的「下一轮最小闭环」
+## 建议的「下一轮最小闭环」（历史参考）
 
-完成下面 4 项即可形成稳定节奏，再批量扩展：
-
-1. 更新根 `README.md` 进度描述  
-2. `algorithms/sorting/` + `algorithms/searching/` 双语言各一套完整示例  
-3. `algorithms/dynamic_programming/linear/` 先落 3～5 个经典模型（LIS、LCS、编辑距离等）  
-4. `problems/leetcode/` 再追加 5～10 题，巩固目录与 README 模板  
+上述里程碑多数已完成；当前可按 [structure.md](structure.md) 导航，并以本页 **环境与工程化 / 文档与笔记 / 质量与回归** 中的未勾选项为增量优先级。

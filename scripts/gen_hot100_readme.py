@@ -1,4 +1,4 @@
-"""Generate hot100/README.md from Top 100 Liked order (负雪明烛 blog, 2021)."""
+﻿"""Generate hot100/GUIDE.md from Top 100 Liked order (负雪明烛 blog, 2021)."""
 
 from __future__ import annotations
 
@@ -243,7 +243,7 @@ def build() -> str:
     lines.extend(
         [
             "",
-            "新增题目：复制 [problem_template.md](../../../docs/problem_template.md) 为目录内 `README.md`，并添加 `solution.py` / `solution.cpp`，再将上表对应行改为 `../leetcode/.../` 链接。",
+            "新增题目：复制 [problem_template.md](../../../docs/problem_template.md) 为目录内 `GUIDE.md`，并添加 `solution.py` / `solution.cpp`，再将上表对应行改为 `../leetcode/.../` 链接。",
         ]
     )
     return "\n".join(lines) + "\n"
@@ -254,7 +254,7 @@ def main() -> None:
     text = build()
     repo_root = Path(__file__).resolve().parents[1]
     for lang in ("python", "cpp"):
-        path = repo_root / lang / "problems" / "hot100" / "README.md"
+        path = repo_root / lang / "problems" / "hot100" / "GUIDE.md"
         path.write_text(text, encoding="utf-8")
         print("wrote", path)
 

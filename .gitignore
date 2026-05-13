@@ -33,3 +33,7 @@ Thumbs.db
 # Misc
 *.log
 *.tmp
+
+# Local scratch at repo root (e.g. compiler debug redirects)
+gpp_log.txt
+tmp_gcc*.txt

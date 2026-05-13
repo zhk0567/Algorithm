@@ -1,10 +1,10 @@
 # 图算法（C++）
 
-| 子目录 | 内容 |
-|--------|------|
-| `traversal/` | DFS、BFS |
-| `shortest_path/` | Dijkstra、Bellman-Ford、Floyd 等 |
-| `mst/` | Kruskal、Prim |
-| `topological_sort/` | 拓扑排序 |
-| `scc/` | Tarjan、Kosaraju |
-| `network_flow/` | 最大流、最小割等 |
+| 子目录 | 内容 | 入口 |
+|--------|------|------|
+| `traversal/` | DFS、BFS | `graph_traversal.cpp` |
+| `shortest_path/` | Dijkstra 等 | `dijkstra.cpp` |
+| `mst/` | Kruskal、Prim | `kruskal.cpp` |
+| `topological_sort/` | 拓扑排序 | `kahn.cpp` |
+| `scc/` | Tarjan | `tarjan.cpp` |
+| `network_flow/` | 最大流 | `edmonds_karp.cpp` |

@@ -14,6 +14,10 @@
 | `prefix_sum/` | 前缀和、差分 |
 | `bit_manipulation/` | 位运算 |
 | `graph/` | 遍历、最短路、MST、拓扑、强连通、网络流 |
-| `string/` | KMP、Manacher、Trie、AC 自动机等 |
+| `string/` | KMP 等 |
 | `math/` | 数论、组合、矩阵、几何、概率 |
-| `advanced/` | 莫队、LCA、平衡树等专题 |
+| `advanced/` | 分块等专题 |
+
+## 已实现源码（与 Python 同构）
+
+各子目录 `README.md` 含 `g++` 编译命令；入口 `.cpp` 与上表 Python 文件名对应（如 `sorting/sorting.cpp`、`graph/shortest_path/dijkstra.cpp`）。

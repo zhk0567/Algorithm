@@ -1,10 +1,10 @@
 # 图算法（Python）
 
-| 子目录 | 内容 |
-|--------|------|
-| `traversal/` | DFS、BFS |
-| `shortest_path/` | Dijkstra、Bellman-Ford、Floyd 等 |
-| `mst/` | Kruskal、Prim |
-| `topological_sort/` | 拓扑排序 |
-| `scc/` | Tarjan、Kosaraju |
-| `network_flow/` | 最大流、最小割等 |
+| 子目录 | 内容 | 入口 |
+|--------|------|------|
+| `traversal/` | DFS、BFS | `graph_traversal.py` |
+| `shortest_path/` | Dijkstra 等 | `dijkstra.py` |
+| `mst/` | Kruskal、Prim | `kruskal.py` |
+| `topological_sort/` | 拓扑排序 | `kahn.py` |
+| `scc/` | Tarjan、Kosaraju | `tarjan.py` |
+| `network_flow/` | 最大流 | `edmonds_karp.py` |

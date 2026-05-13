@@ -22,12 +22,13 @@
 - [Python 刷题](python/problems/README.md)
 - [C++ 说明与编译](cpp/README.md)
 - [学习路线图](docs/roadmap.md)
+- [后续任务清单](docs/next_tasks.md)
 
 ## 进度（可手动更新）
 
-- 数据结构：0 / 计划中
-- 算法分类：0 / 计划中
-- 题目：见各 `problems/<来源>/` 下子目录数量
+- 数据结构：第一阶段已完成（见 [docs/next_tasks.md](docs/next_tasks.md)）
+- 算法分类：第二阶段已完成（`python/algorithms/`、`cpp/algorithms/` 各叶子目录均有 README + 示例代码）
+- 题目：`leetcode/` 已归档多题（见 [Hot 100 索引](python/problems/hot100/README.md)），其余来源见各 `problems/<来源>/README.md`
 
 ## 范例
 

@@ -1,10 +1,10 @@
 # 动态规划（C++）
 
-| 子目录 | 典型问题 |
-|--------|----------|
-| `linear/` | 最长递增子序列、打家劫舍等 |
-| `interval/` | 石子合并、矩阵链乘等 |
-| `tree/` | 树上 DP |
-| `digit/` | 数位 DP |
-| `bitmask/` | 状压 DP |
-| `knapsack/` | 0-1、完全、多重背包 |
+| 子目录 | 典型问题 | 入口 |
+|--------|----------|------|
+| `linear/` | LIS、LCS、编辑距离、打家劫舍 | `linear_dp.cpp` |
+| `interval/` | 矩阵链乘等 | `interval_dp.cpp` |
+| `tree/` | 树上最大独立权 | `tree_dp.cpp` |
+| `digit/` | 数位和模 K 计数 | `digit_dp.cpp` |
+| `bitmask/` | TSP 状压 | `bitmask_dp.cpp` |
+| `knapsack/` | 0-1、完全背包 | `knapsack_dp.cpp` |

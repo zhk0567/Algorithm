@@ -25,3 +25,9 @@
 
 - 日常：`problems/leetcode/` 等按来源归档
 - 面试：`interview/classic/`、`interview/top_frequent/` 索引与专题
+
+## 当前仓库进度（简记）
+
+- `data_structures/`：第一阶段已铺全（Python + C++）
+- `algorithms/`：第二阶段已铺全（Python + C++），见各子目录 README 与入口源码
+- `problems/leetcode/`：第三阶段已启动，Hot 100 索引见 `problems/hot100/README.md`，可按模板持续加题

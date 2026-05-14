@@ -1,42 +1,108 @@
-# Algorithm（算法整理）
+# Algorithm · 双语言算法与刷题仓库
 
-本仓库用于系统整理 **Python** 与 **C++** 双语言算法与刷题记录，目录在两种语言下 **同构**，便于对照学习。
+面向 **面试准备** 与 **长期复习** 的个人知识库：同一套目录在 **Python** 与 **C++** 下 **镜像同构**，便于对照语法、边界与常数差异。内容覆盖数据结构、算法范式、LeetCode 归档（含 Hot 100 点赞序索引）、手写面试题与工程向小专题。
 
-## 目录结构
+---
 
-| 路径 | 说明 |
+## 仓库约定（请先读）
+
+| 约定 | 说明 |
 |------|------|
-| [docs/](docs/) | 路线图、任务、规范；**入口** [docs/README.md](docs/README.md) |
-| [scripts/](scripts/) | 维护脚本（如 Hot 100 索引生成） |
-| [python/](python/) | Python：`data_structures` / `algorithms` / `problems` / `interview` |
-| [cpp/](cpp/) | C++：与 `python/` 同构 |
+| **唯一 `README.md`** | 全仓库只在**本根目录**保留 `README.md`；其余任何子目录的说明文件一律命名为 **`notes.md`**（Markdown）。 |
+| **`docs/` 文档** | **[doc-handbook.md](docs/doc-handbook.md)**（目录·路线·模板）；**[doc-tasks.md](docs/doc-tasks.md)**（任务清单，单独维护）。 |
+| **题目目录** | LeetCode 等：`python/problems/leetcode/<四位编号>_<snake_case>/` 与 `cpp/...` 对称；每题 **`notes.md` + `solution.py` / `solution.cpp`**（末尾自带简单断言或样例）；SQL 题为 `solution.sql`。 |
+| **Hot 100 索引** | 点赞序题单表由脚本生成，见 `python/problems/hot100/notes.md` 与 `cpp/problems/hot100/notes.md`（与题号数值顺序无关）。 |
 
-更细的树形说明见 **[docs/structure.md](docs/structure.md)**。
+仓库说明、学习路线、算法骨架、复杂度与**单题写作模板**见 **[docs/doc-handbook.md](docs/doc-handbook.md)**；**勾选类待办**见 **[docs/doc-tasks.md](docs/doc-tasks.md)**。
 
-## 命名约定
+---
 
-- **LeetCode 等题目目录**：`<4位编号>_<snake_case_title>/`，例如 `0001_two_sum/`
-- 每题目录内：`README.md`（题面、思路、复杂度、陷阱）+ `solution.py` 或 `solution.cpp`（文件末尾用 `main` / `if __name__` 跑简单样例）
+## 顶层目录一览
 
-## 快速导航
+```
+Algorithm/
+├── README.md          ← 你正在阅读的唯一仓库入口
+├── docs/              ← [doc-handbook.md](docs/doc-handbook.md) + [doc-tasks.md](docs/doc-tasks.md)
+├── scripts/           ← 维护与回归（Hot100、top_frequent 校验、run_all_python、smoke_compile_cpp 等）
+├── python/            ← Python：data_structures / algorithms / problems / interview
+└── cpp/               ← C++：与 python/ 同构
+```
 
-- [Python 数据结构](python/data_structures/README.md)
-- [Python 算法分类](python/algorithms/README.md)
-- [Python 刷题](python/problems/README.md)
-- [Python 面试专题](python/interview/README.md)
-- [C++ 说明与编译](cpp/README.md)
-- [文档索引](docs/README.md)
-- [学习路线图](docs/roadmap.md)
-- [后续任务清单](docs/next_tasks.md)
+---
 
-## 进度（可手动更新）
+## 快速开始
 
-- **数据结构**：第一阶段已完成（见 [docs/next_tasks.md](docs/next_tasks.md)）
-- **算法分类**：第二阶段已完成（`python/algorithms/`、`cpp/algorithms/` 各叶子目录均有 README + 示例代码）
-- **刷题**：LeetCode **Hot 100** 已对齐收录（99 题 Python+C++，LC 175 为 SQL-only；索引见 [python/problems/hot100/README.md](python/problems/hot100/README.md)）；`offer/`、`codetop/` 等见各子目录 README
-- **面试专题**：第四阶段首批已完成（`interview/classic/`、`interview/top_frequent/`）
+### Python
 
-## 范例
+```powershell
+Set-Location F:\Study\Algorithm
+# 运行某一题（示例）
+python python\problems\leetcode\0001_two_sum\solution.py
+```
 
-- [LeetCode 1 两数之和（Python）](python/problems/leetcode/0001_two_sum/)
-- [LeetCode 1 两数之和（C++）](cpp/problems/leetcode/0001_two_sum/)
+建议 **Python 3.10+**（广泛使用 `list[int]` 等内置泛型注解）。各子域入口：[python/notes.md](python/notes.md)。
+
+### C++（MinGW / LLVM）
+
+```powershell
+Set-Location F:\Study\Algorithm\cpp\problems\leetcode\0001_two_sum
+g++ -std=c++17 -O2 -Wall -Wextra -o run.exe solution.cpp
+.\run.exe
+```
+
+含 `std::thread` 的示例需加 **`-pthread`**。说明与习惯命令见 [cpp/notes.md](cpp/notes.md)。
+
+### 维护脚本（索引 / 回归）
+
+```powershell
+Set-Location F:\Study\Algorithm
+python scripts\gen_hot100_readme.py
+python scripts\check_top_frequent_leetcode.py
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run_all_python.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\smoke_compile_cpp.ps1
+```
+
+脚本说明：[scripts/doc-scripts.md](scripts/doc-scripts.md)。`run_all_python.ps1` 可加 `-IncludeLeetcode` 顺带跑全部 `leetcode` 的 `solution.py`（耗时更长）。
+
+---
+
+## 核心导航
+
+| 你想… | 去哪里 |
+|--------|--------|
+| 看数据结构专题与代码 | [python/data_structures/notes.md](python/data_structures/notes.md) / [cpp/data_structures/notes.md](cpp/data_structures/notes.md) |
+| 看算法分类（DP、图、字符串等） | [python/algorithms/notes.md](python/algorithms/notes.md) / [cpp/algorithms/notes.md](cpp/algorithms/notes.md) |
+| 刷题归档与题源约定 | [python/problems/notes.md](python/problems/notes.md) / [cpp/problems/notes.md](cpp/problems/notes.md) |
+| Hot 100 点赞序索引 | [python/problems/hot100/notes.md](python/problems/hot100/notes.md) |
+| 手写专题（含 Treiber / Ticket Lock / 写者优先 RWLock / TAS / MPMC 无锁队列 等） | [python/interview/notes.md](python/interview/notes.md) |
+| 后续要做什么 | [docs/doc-tasks.md](docs/doc-tasks.md) |
+| 新题 `notes.md` 怎么写 | [docs/doc-handbook.md#problem-notes-template](docs/doc-handbook.md#problem-notes-template) |
+| 学习路线 | [docs/doc-handbook.md#study-roadmap](docs/doc-handbook.md#study-roadmap) |
+
+---
+
+## 当前进度（摘要）
+
+- **数据结构**：第一阶段已按专题铺全（双语言 + `notes.md`）。
+- **算法**：第二阶段各子目录已有范式示例与说明。
+- **LeetCode Hot 100**：已对齐收录（**99** 题 Python+C++，**LC 175** 为 SQL-only）；索引见上表 Hot 100 链接。
+- **面试第四阶段**：`interview/classic/`（含 LRU、LFU、队列、单例、限流、环形缓冲、线程池、信号量、读写锁、**写者优先读写锁**、Treiber 栈、**Ticket Lock**、**TAS 自旋锁**、**MPMC 无锁队列** 等）与 `interview/top_frequent/`（双语文首含与 `leetcode/` 同步说明）。
+
+详细勾选与工程化待办见 **[docs/doc-tasks.md](docs/doc-tasks.md)**。
+
+---
+
+## 新题入库流程（极简）
+
+1. 在 `python/problems/leetcode/` 与 `cpp/problems/leetcode/` 下各建同名目录 `NNNN_snake_case/`。  
+2. 复制 [docs/doc-handbook.md#problem-notes-template](docs/doc-handbook.md#problem-notes-template) 的结构到两边的 **`notes.md`**。  
+3. 编写 `solution.py` / `solution.cpp`，末尾保留可本地运行的自检。  
+4. 若该题属于 Hot 100：更新 `scripts/gen_hot100_readme.py` 中的 `IMPLEMENTED`，再运行脚本刷新 `hot100/notes.md`。
+
+---
+
+## 许可与声明
+
+题目版权归 respective 平台（如 LeetCode）；本仓库代码与文字说明为个人学习整理，按你本地习惯决定是否开源协议；转载题目描述请注意平台条款。
+
+若你发现某处仍残留旧链接或命名，欢迎直接改 **`notes.md`** 或 **[docs/doc-handbook.md](docs/doc-handbook.md)** 并提交修正。

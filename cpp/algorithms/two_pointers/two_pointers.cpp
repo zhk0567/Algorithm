@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 optional<pair<int, int>> two_sum_sorted(const vector<int>& a, int t) {

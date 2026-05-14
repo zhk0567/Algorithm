@@ -1,5 +1,6 @@
 // LeetCode 22
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 class Solution {
@@ -31,7 +32,8 @@ public:
 int main() {
     auto v = Solution().generateParenthesis(3);
     set<string> st(v.begin(), v.end());
-    assert(st == set<string>{"((()))", "(()())", "(())()", "()(())", "()()()"});
+    const set<string> want{"((()))", "(()())", "(())()", "()(())", "()()()"};
+    assert(st == want);
     assert(Solution().generateParenthesis(1) == vector<string>{"()"});
     cout << "0022 OK" << endl;
     return 0;

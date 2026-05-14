@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 vector<vector<int>> tarjan_scc(const vector<vector<int>>& adj) {

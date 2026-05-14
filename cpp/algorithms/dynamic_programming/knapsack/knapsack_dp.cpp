@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 int knapsack01(const vector<int>& w, const vector<int>& v, int cap) {

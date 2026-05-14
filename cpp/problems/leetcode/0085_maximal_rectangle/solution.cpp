@@ -1,5 +1,6 @@
 // LeetCode 85
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 static int largestInHist(vector<int> h) {

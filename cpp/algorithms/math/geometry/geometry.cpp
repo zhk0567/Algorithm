@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 long long cross(long long ax, long long ay, long long bx, long long by) { return ax * by - ay * bx; }

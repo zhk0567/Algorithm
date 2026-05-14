@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 optional<vector<int>> topological_sort(const vector<vector<int>>& adj) {

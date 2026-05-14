@@ -2,7 +2,7 @@
 
 与 `python/` **同构**。
 
-- 仓库级目录说明：[docs/structure.md](../docs/structure.md)
+- 仓库级目录说明：[docs/doc-handbook.md#repo-layout](../docs/doc-handbook.md#repo-layout)
 - 维护脚本：[scripts/GUIDE.md](../scripts/GUIDE.md)
 
 单文件编译示例（在题目目录下）：

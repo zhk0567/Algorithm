@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 vector<long long> dijkstra(const vector<vector<pair<int, int>>>& adj, int src) {

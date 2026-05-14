@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 int max_sum_subarray_k(const vector<int>& nums, int k) {

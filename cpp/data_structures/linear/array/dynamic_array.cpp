@@ -1,5 +1,6 @@
 // 手写动态数组（封装 vector + 显式扩容演示）
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 class DynamicArray {

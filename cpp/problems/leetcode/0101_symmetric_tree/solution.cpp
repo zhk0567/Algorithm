@@ -1,5 +1,6 @@
 // LeetCode 101
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 struct TreeNode {

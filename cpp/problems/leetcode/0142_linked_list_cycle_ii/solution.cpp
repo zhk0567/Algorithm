@@ -1,5 +1,6 @@
 // LeetCode 142
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 struct ListNode {

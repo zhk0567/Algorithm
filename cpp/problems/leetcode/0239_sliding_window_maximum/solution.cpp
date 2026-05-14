@@ -1,5 +1,6 @@
 // LeetCode 239
 #include <bits/stdc++.h>
+#include <cassert>
 using namespace std;
 
 class Solution {

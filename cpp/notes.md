@@ -3,7 +3,7 @@
 与 `python/` **同构**。
 
 - 仓库手册：[docs/doc-handbook.md](../docs/doc-handbook.md)
-- 任务清单：[docs/doc-tasks.md](../docs/doc-tasks.md)
+- 任务清单（仅未完成）：[docs/doc-tasks.md](../docs/doc-tasks.md)
 - 维护脚本：[scripts/doc-scripts.md](../scripts/doc-scripts.md)
 
 单文件编译示例（在题目目录下）：

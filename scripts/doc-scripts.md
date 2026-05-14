@@ -1,6 +1,6 @@
 # 维护脚本
 
-规范、目录与单题模板见 **[../docs/doc-handbook.md](../docs/doc-handbook.md)**；勾选待办见 **[../docs/doc-tasks.md](../docs/doc-tasks.md)**。
+规范、目录与单题模板见 **[../docs/doc-handbook.md](../docs/doc-handbook.md)**；**未完成待办**见 **[../docs/doc-tasks.md](../docs/doc-tasks.md)**。
 
 | 脚本 | 作用 |
 |------|------|
@@ -19,3 +19,5 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\smoke_compile_cpp.
 ```
 
 修改题单或新增实现后，更新脚本内的 `IMPLEMENTED` 映射再运行即可。增删 `top_frequent/notes.md` 题链后运行 `check_top_frequent_leetcode.py` 防死链与双语文不同步。大改 C++/Python 自测后建议跑 `smoke_compile_cpp.ps1` / `run_all_python.ps1`。
+
+**C++ 题解**：若使用 `assert`，建议显式 `#include <cassert>`（部分 MinGW 下仅 `#include <bits/stdc++.h>` 不够）；避免 `assert(含逗号的 {…})` 被宏拆参，可先写入临时变量再断言。

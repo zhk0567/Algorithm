@@ -1,6 +1,6 @@
 # 仓库手册（目录 · 路线 · 模板）
 
-> **合并说明**：目录约定、学习路线、算法骨架、复杂度与单题写作模板等集中在本页；**勾选类任务**单独维护在 **[doc-tasks.md](doc-tasks.md)**。根目录仍只保留 **[README.md](../README.md)**；子目录说明统一为 **`notes.md`**。
+> **合并说明**：目录约定、学习路线、算法骨架、复杂度与单题写作模板等集中在本页；**未完成待办**单独维护在 **[doc-tasks.md](doc-tasks.md)**（仅列 `[ ]` 项）。根目录仍只保留 **[README.md](../README.md)**；子目录说明统一为 **`notes.md`**。
 
 ---
 
@@ -71,7 +71,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\smoke_compile_cpp.
 
 1. **树与堆**：`data_structures/tree/`
 2. **图**：表示、遍历、最短路、拓扑（`data_structures/graph/`、`algorithms/graph/`）
-3. **双指针 / 滑动窗口 / 前缀和**：`two_pointers`、`sliding_window`、`prefix_sum`
+3. **双指针 / 滑动窗口 / 前缀和**：`two_pointers`、`sliding_window`、`prefix_sum`；**莫队**见 `algorithms/advanced/mo_algorithm/`；**树上 LCA**见 `algorithms/graph/lca/`
 
 ### 专题
 
@@ -91,7 +91,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\smoke_compile_cpp.
 - `problems/leetcode/`：Hot 100 已对齐（99 题 Python+C++，LC 175 SQL-only），索引见 `problems/hot100/notes.md`
 - `interview/`：classic（含读写锁/写者优先、Treiber 栈、Ticket Lock、TAS、MPMC 无锁队列 等）+ `top_frequent/`（双语文首含同步说明）；回归可跑 `scripts/run_all_python.ps1` / `scripts/smoke_compile_cpp.ps1`
 
-**后续勾选与工程化待办** → **[doc-tasks.md](doc-tasks.md)**。
+**未完成工程化待办** → **[doc-tasks.md](doc-tasks.md)**。
 
 ---
 
@@ -102,6 +102,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\smoke_compile_cpp.
 ### 二分（左闭右开）
 
 - 不变量：`[lo, hi)` 内保留答案；`check(mid)` 与边界更新一致。
+
+### 二分答案
+
+- 答案具有单调性：若「容量 ≥ mid 可行」则 mid 增大仍可能可行；在答案域上对 `check` 做二分。与「在有序数组里找下标」不同：这里 `check` 往往是贪心或模拟。
 
 ### 回溯
 
@@ -143,6 +147,45 @@ def dfs(路径, 选择列表):
 
 - `next[i]`：模式串在位置 i 失配时模式应回退到的下标；主串指针不回退，整体 O(n+m)。
 
+### 双指针
+
+- **对撞**：左右端向中间移动，常用于有序数组求和、去重、接雨水变体。
+- **快慢**：链表判环、找中点；数组原地重排（如移动零）。
+
+### 前缀和与差分
+
+- **前缀和**：`s[i]=sum(a[0..i-1])`，区间和 O(1)；二维同理。
+- **差分**：对区间 `[l,r)` 加常数在 `d[l]+=v, d[r]-=v`，最后前缀还原；树上前缀可用「链上差分 + LCA」思路（本仓库进阶题单再补）。
+
+### 贪心
+
+- 局部最优推全局：常见证法有**交换论证**（任意最优解经有限次交换不劣于贪心构造）、**拟阵**（了解即可）。
+- 实现前先想清楚反例；面试口述「为何贪心成立」往往比代码更关键。
+
+### 动态规划（通用）
+
+- **状态**：用最少变量描述子问题边界（下标、容量、 bitmask 等）。
+- **转移**：显式写出「从哪些更小状态来」；注意遍历顺序（0-1 背包一维数组需倒序）。
+- **边界与答案**：`dp[0]`、空串、空集；答案可能是 `max(dp)` 或 `dp[n][·]` 的某一维投影。
+- **空间**：观察是否只需上一行 → **滚动数组**。
+
+### 拓扑排序
+
+- DAG 上 Kahn（入度队列）或 DFS 后序染色；有环则无法排出全序。
+
+### 最短路（补充）
+
+- **Bellman–Ford**：可判负环，单源 O(V·E)，边少或含负权时考虑。
+- **Floyd–Warshall**：全源最短路 O(V^3)，V 较小时或预处理传递闭包。
+
+### 莫队
+
+- 离线重排区间询问，配合 `add(i)` / `remove(i)` 维护区间信息；指针在数组上移动总距离约 O((n+q)·√n) 量级；实现见 `algorithms/advanced/mo_algorithm/`。
+
+### 树上 LCA
+
+- **倍增**：DFS 求深度与 `up[k][u]`（2^k 祖先），每次查询 O(log n)；实现见 `algorithms/graph/lca/`。另可学 Tarjan 离线、欧拉序 + RMQ。
+
 ---
 
 ## Complexity
@@ -165,18 +208,26 @@ def dfs(路径, 选择列表):
 | 平衡 BST 插入/查找 | O(log n) | O(log n) | O(n) |
 | 堆 push/pop | O(log n) | O(log n) | O(n) |
 | 比较排序 | O(n log n) | O(n log n) | O(1)~O(n) |
-| 并查集 `find`/`union`（路径压缩 + 按秩） | 均摊 α(n)* | 同上 | O(n) |
+| 并查集 `find`/`union`（路径压缩 + 按秩） | 均摊 α(n)† | 同上 | O(n) |
 | 线段树 / 树状数组 单点或区间 | O(log n) | O(log n) | O(n) |
 | Trie 插入 / 前缀查询 | O(L) | O(L) | 结点数 |
 | DFS/BFS（图） | O(V+E) | O(V+E) | O(V) |
 | Dijkstra（堆） | O((V+E) log V) | 同上 | O(V) |
+| Bellman–Ford（单源） | O(V·E) | O(V·E) | O(V) |
+| Floyd–Warshall（全源） | O(V^3) | O(V^3) | O(V^2) |
+| 稀疏表 RMQ（静态区间最值） | O(n log n) 预处理 | O(1) 查询 | O(n log n) |
+| 滚动哈希 + 二分 / 双哈希 | O(n) 预处理 | 单次比较 O(1)~O(log n) | O(n) |
+| 莫队（显式 add/remove） | O((n+q)·√n) 量级* | 同上 | O(值域) |
+| 树上 LCA（倍增） | O(n log n) 预处理 | O(log n) 单次查询 | O(n log n) |
 
-\* α 为反阿克曼函数，实际可视为很小的常数级。
+\* 与块大小选取有关，常写作均摊 O((n+q)√n)。  
+† α 为反阿克曼函数，实际可视为很小的常数级。
 
 ### 分析习惯
 
 - 数清 **DP 状态规模**、**回溯分支因子**、**单调栈摊还**。
 - 空间勿忘 **递归栈** 与 **辅助结构**。
+- 写 **`assert` / 自测**时：C++ 若只用 `bits/stdc++.h`，在部分环境需显式 `#include <cassert>`；`assert(含逗号的初始化列表)` 易被宏拆开，宜先赋给临时变量再断言（维护说明见 **[scripts/doc-scripts.md](../scripts/doc-scripts.md)**）。
 
 ---
 
@@ -188,6 +239,7 @@ def dfs(路径, 选择列表):
 
 - **来源**：（如 LeetCode 1）
 - **链接**：
+- **难度 / 标签**：（可选，便于检索）
 - **简述**：
 
 ### 思路
@@ -200,6 +252,10 @@ def dfs(路径, 选择列表):
 | 解法 | 时间 | 空间 |
 |------|------|------|
 | | | |
+
+### 自测与边界
+
+- 样例、小规模手造、极端（空、单点、全相同、上限）；（C++/Python）末尾 `main` / `if __name__ == "__main__"` 断言习惯与仓库其他题一致。
 
 ### 陷阱与注意
 

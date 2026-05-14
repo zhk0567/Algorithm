@@ -8,3 +8,4 @@
 | `topological_sort/` | 拓扑排序 | `kahn.py` |
 | `scc/` | Tarjan、Kosaraju | `tarjan.py` |
 | `network_flow/` | 最大流 | `edmonds_karp.py` |
+| `lca/` | 树上倍增 LCA | `lca.py` |

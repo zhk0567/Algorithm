@@ -22,6 +22,7 @@ int dfs(int i, bool tight, int mod, int z) {
 }
 
 int count_digit_sum_mod0(long long n, int k) {
+    if (k <= 0) throw runtime_error("k must be positive");
     if (n < 0) return 0;
     K = k;
     s = to_string(n);
@@ -42,6 +43,11 @@ int brute(long long nn, int k) {
 int main() {
     int k = 3;
     for (long long nn = 0; nn < 500; ++nn) assert(count_digit_sum_mod0(nn, k) == brute(nn, k));
+    try {
+        count_digit_sum_mod0(10, 0);
+        assert(false);
+    } catch (const runtime_error&) {
+    }
     cout << "digit_dp OK" << endl;
     return 0;
 }

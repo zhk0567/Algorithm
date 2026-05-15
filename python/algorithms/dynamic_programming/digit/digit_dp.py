@@ -5,6 +5,8 @@ from functools import lru_cache
 
 
 def count_digit_sum_mod0(n: int, k: int) -> int:
+    if k <= 0:
+        raise ValueError("k must be positive")
     if n < 0:
         return 0
     s = str(n)
@@ -38,4 +40,9 @@ if __name__ == "__main__":
 
     for nn in range(0, 500):
         assert count_digit_sum_mod0(nn, k) == brute(nn)
+    try:
+        count_digit_sum_mod0(10, 0)
+        raise AssertionError("expected ValueError")
+    except ValueError:
+        pass
     print("digit_dp OK")

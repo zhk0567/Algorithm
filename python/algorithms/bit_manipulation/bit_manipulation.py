@@ -30,4 +30,6 @@ if __name__ == "__main__":
     assert lowbit(12) == 4
     assert popcount(0b1011) == 3
     assert set(subsets_of_mask(0b101)) == {0b101, 0b100, 0b001, 0b000}
+    assert lowbit(0) == 0 and popcount(0) == 0
+    assert subsets_of_mask(0) == [0]
     print("bit_manipulation OK")

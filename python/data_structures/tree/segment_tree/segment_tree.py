@@ -66,4 +66,6 @@ if __name__ == "__main__":
     assert st.range_sum(1, 3) == 9
     st.range_add(1, 3, 10)
     assert st.range_sum(0, 4) == 1 + (2 + 10) + (3 + 10) + (4 + 10) + 5
+    st0 = SegmentTreeLazy([])
+    assert st0.range_sum(0, 0) == 0
     print("SegmentTree OK")

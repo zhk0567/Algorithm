@@ -27,7 +27,9 @@ class UF:
 
 
 def kruskal(n: int, edges: list[tuple[int, int, int]]) -> int:
-    """edges: (u,v,w)，无向；返回 MST 边权和。"""
+    """edges: (u,v,w)，无向；返回 MST 边权和。要求图连通。"""
+    if n <= 1:
+        return 0
     edges = sorted(edges, key=lambda t: t[2])
     uf = UF(n)
     total = 0
@@ -38,6 +40,8 @@ def kruskal(n: int, edges: list[tuple[int, int, int]]) -> int:
             cnt += 1
             if cnt == n - 1:
                 break
+    if cnt < n - 1:
+        raise ValueError("graph is not connected")
     return total
 
 
@@ -45,4 +49,10 @@ if __name__ == "__main__":
     # 三角形 0-1:4, 1-2:3, 0-2:2 -> MST 2+3=5
     e = [(0, 1, 4), (1, 2, 3), (0, 2, 2)]
     assert kruskal(3, e) == 5
+    assert kruskal(1, []) == 0
+    try:
+        kruskal(2, [])
+        raise AssertionError("expected ValueError")
+    except ValueError:
+        pass
     print("mst OK")

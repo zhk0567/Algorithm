@@ -112,4 +112,11 @@ if __name__ == "__main__":
     assert t.kth(1) == 2
     t.delete(3)
     assert t.inorder() == [2, 4, 5, 6, 7, 8]
+    t.insert(5)
+    assert t.inorder() == [2, 4, 5, 6, 7, 8]
+    try:
+        t.delete(99)
+        raise AssertionError("expected KeyError")
+    except KeyError:
+        pass
     print("BST OK")

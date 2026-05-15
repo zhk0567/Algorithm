@@ -40,4 +40,6 @@ if __name__ == "__main__":
     da = DifferenceArray(5)
     da.range_add(1, 3, 5)
     assert da.to_array() == [0, 5, 5, 5, 0]
+    assert build_prefix([]) == [0]
+    assert DifferenceArray(0).to_array() == []
     print("prefix_sum OK")

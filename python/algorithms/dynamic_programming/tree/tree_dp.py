@@ -36,4 +36,5 @@ if __name__ == "__main__":
     #     3   1
     r = TreeNode(3, TreeNode(2, None, TreeNode(3)), TreeNode(3, None, TreeNode(1)))
     assert rob_tree(r) == 7
+    assert rob_tree(None) == 0
     print("tree_dp OK")

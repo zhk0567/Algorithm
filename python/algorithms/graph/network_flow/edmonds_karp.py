@@ -5,6 +5,8 @@ from collections import deque
 
 
 def edmonds_karp(cap: list[list[int]], s: int, t: int) -> int:
+    if s == t:
+        return 0
     n = len(cap)
     flow = 0
     g = [row[:] for row in cap]
@@ -46,4 +48,7 @@ if __name__ == "__main__":
     cap[1][3] = 2
     cap[2][3] = 3
     assert edmonds_karp(cap, 0, 3) == 5
+    z = [[0] * 3 for _ in range(3)]
+    assert edmonds_karp(z, 0, 2) == 0
+    assert edmonds_karp(z, 0, 0) == 0
     print("network_flow OK")

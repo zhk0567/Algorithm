@@ -31,4 +31,6 @@ if __name__ == "__main__":
     assert uf.unite(0, 1) and uf.unite(1, 2)
     assert uf.find(0) == uf.find(2)
     assert not uf.unite(0, 2)
+    uf1 = UnionFind(1)
+    assert uf1.find(0) == 0 and not uf1.unite(0, 0)
     print("UnionFind OK")

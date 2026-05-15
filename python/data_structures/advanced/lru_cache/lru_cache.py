@@ -72,4 +72,14 @@ if __name__ == "__main__":
     assert c.get(2) == -1
     c.put(4, 4)
     assert c.get(1) == -1 and c.get(3) == 3
+    c1 = LRUCache(1)
+    c1.put(1, 1)
+    c1.put(2, 2)
+    assert c1.get(1) == -1
+    assert LRUCache(2).get(9) == -1
+    try:
+        LRUCache(0)
+        raise AssertionError("expected ValueError")
+    except ValueError:
+        pass
     print("LRUCache OK")

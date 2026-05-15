@@ -1,5 +1,7 @@
 # 算法分类（C++）
 
+> **全库覆盖盘点**（含缺口队列）：[算法覆盖总表](../../docs/algorithm-coverage.md)。
+
 | 子目录 | 内容 |
 |--------|------|
 | `sorting/` | 冒泡、选择、插入、归并、快排、堆排、计数、基数、桶 |
@@ -13,7 +15,7 @@
 | `sliding_window/` | 滑动窗口 |
 | `prefix_sum/` | 前缀和、差分 |
 | `bit_manipulation/` | 位运算 |
-| `graph/` | 遍历、最短路、MST、拓扑、强连通、网络流、[树上 LCA](graph/lca/) |
+| `graph/` | 遍历、最短路、MST、拓扑、强连通、网络流、二分图匹配、[树上 LCA](graph/lca/) |
 | `string/` | KMP 等 |
 | `math/` | 数论、组合、矩阵、几何、概率 |
 | `advanced/` | 分块 [`sqrt_decomposition`](advanced/sqrt_decomposition.cpp)、[莫队](advanced/mo_algorithm/) |

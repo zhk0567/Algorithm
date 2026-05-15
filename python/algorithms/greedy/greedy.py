@@ -32,5 +32,8 @@ def fractional_knapsack(items: list[tuple[int, int]], capacity: int) -> float:
 
 if __name__ == "__main__":
     assert activity_selection([(1, 2), (3, 4), (5, 6), (7, 8)]) == 4
+    assert activity_selection([]) == 0
     assert abs(fractional_knapsack([(10, 60), (20, 100), (30, 120)], 50) - 240.0) < 1e-9
+    assert fractional_knapsack([], 10) == 0.0
+    assert fractional_knapsack([(0, 10)], 5) == 0.0
     print("greedy OK")

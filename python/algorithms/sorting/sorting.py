@@ -162,13 +162,19 @@ def bucket_sort_unit_interval(a: list[float]) -> list[float]:
 
 if __name__ == "__main__":
     sample = [5, 2, 8, 1, 9, 3]
+    empty: list[int] = []
     assert bubble_sort(sample) == sorted(sample)
+    assert selection_sort(sample) == sorted(sample)
+    assert insertion_sort(sample) == sorted(sample)
+    assert bubble_sort(empty) == []
+    assert selection_sort([1]) == [1]
     assert merge_sort(sample) == sorted(sample)
     t = sample[:]
     quick_sort_inplace(t)
     assert t == sorted(sample)
     assert heap_sort(sample) == sorted(sample)
     assert counting_sort_nonnegative([3, 0, 2, 2, 1]) == [0, 1, 2, 2, 3]
+    assert counting_sort_nonnegative([]) == []
     assert radix_sort_nonneg([170, 45, 75, 90, 2, 802]) == sorted([170, 45, 75, 90, 2, 802])
     assert bucket_sort_unit_interval([0.9, 0.1, 0.4, 0.35]) == sorted([0.9, 0.1, 0.4, 0.35])
     print("sorting OK")

@@ -35,4 +35,6 @@ if __name__ == "__main__":
     p = two_sum_sorted(a, 8)
     assert p is not None and a[p[0]] + a[p[1]] == 8
     assert max_area([1, 8, 6, 2, 5, 4, 8, 3, 7]) == 49
+    assert two_sum_sorted([], 0) is None
+    assert max_area([]) == 0 and max_area([3]) == 0
     print("two_pointers OK")

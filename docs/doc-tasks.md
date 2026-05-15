@@ -1,28 +1,34 @@
-# 任务清单（分阶段）
+# 任务清单
 
-> 与 [仓库手册 · 学习路线](doc-handbook.md#study-roadmap) 对照使用。  
-> **维护**：本文件**只保留未完成项**（`[ ]`）；已落地内容请查 [仓库手册](doc-handbook.md) 目录、脚本表与「当前进度」；大改功能后若发现本清单与仓库脱节，再增删条目即可。
-
----
-
-## 第零阶段：环境与工具链（可选）
-
-- [ ] 对 **整个** `cpp/**`（含 `problems/leetcode/**` 以外各题单与专题）按各 `notes.md` 命令做**全量编译冒烟**（体量大，按需排期）
-- [ ] 若长期只用 **MSVC**：为 `cpp/` 规划「无 `bits/stdc++.h`」或统一标准头（工作量较大，单列里程碑）
+> **项目第一目标**：把常见算法与数据结构 **成体系、双语言、可运行自测** 地整理进本仓库（`algorithms/` + `data_structures/`），并与刷题归档、面试专题形成闭环。  
+> **维护**：本文件**只列未完成项**（`[ ]`）；已完成内容见 [仓库手册](doc-handbook.md) 与各目录 `notes.md`。完成某条后**直接删除该行**。
 
 ---
 
-## 第三阶段：`problems/` 刷题归档
+## 主线（P0）：算法与数据结构全量整理
 
-- [ ] 按需向 `leetcode/` 及 `offer/`、`nowcoder/`、`codetop/`、`luogu/` 等**持续加题**、补全索引与交叉链接
+> **覆盖总表**（逐条状态 + 缺口队列）：**[algorithm-coverage.md](algorithm-coverage.md)** — 新增专题前先改表，落地后改 ✅。
 
----
-
-## 第四阶段：`interview/`
-
-- [ ] `interview/classic/`：按需再加无锁结构（如 hazard pointer、无锁链表队列等）或加深现有专题笔记
-- [ ] `interview/top_frequent/`：按你正在刷的题单扩表（非 Hot 100 题号）
+- [ ] **`algorithms/`**：按 **[algorithm-coverage.md](algorithm-coverage.md)** 表 **§一** 维护 ✅、按 **§三** 补齐 **🔲**（子目录 `notes.md` + 双语言入口 + 自测）；对 ✅ 行抽查 **复杂度、边界、反例**
+- [ ] **`data_structures/`**：按总表 **§二** 维护；**§三** 中属结构类的项优先落此树
+- [ ] **跨域索引**：扩充 `python|cpp/algorithms/notes.md` 刷题映射，并与总表 **§四** 对齐
+- [ ] **模板与复杂度文档**：每新增一类算法，同步 [doc-handbook.md](doc-handbook.md) 的 Algorithm templates / Complexity
 
 ---
 
-目录、模板、复杂度与**已完成里程碑**见 **[doc-handbook.md](doc-handbook.md)**；Python/C++ 回归命令见 **[scripts/doc-scripts.md](../scripts/doc-scripts.md)**。
+## 配套（P1）：刷题与面试（在主线间隙推进）
+
+- [ ] `problems/`：向 `leetcode/` 及 `offer/`、`nowcoder/`、`codetop/`、`luogu/` 等**持续加题**、补索引与交叉链接
+- [ ] `interview/classic/`：按需扩展无锁/并发专题或加深笔记
+- [ ] `interview/top_frequent/`：按个人题单扩表（非 Hot 100）
+
+---
+
+## 工具链（P2，可选）
+
+- [ ] 对 **整个** `cpp/**`（含各题单目录）做**全量编译冒烟**（与现有 `scripts/smoke_compile_cpp.ps1` 白名单互补）
+- [ ] 若长期只用 **MSVC**：规划去 `bits/stdc++.h` 或统一标准头
+
+---
+
+算法模板、复杂度、脚本回归命令见 **[doc-handbook.md](doc-handbook.md)**、**[scripts/doc-scripts.md](../scripts/doc-scripts.md)**。

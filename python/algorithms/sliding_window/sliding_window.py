@@ -29,4 +29,6 @@ def length_longest_no_repeat(s: str) -> int:
 if __name__ == "__main__":
     assert max_sum_subarray_k([1, 2, 3, 4, 5], 2) == 9
     assert length_longest_no_repeat("abcabcbb") == 3
+    assert max_sum_subarray_k([1, 2], 0) == 0
+    assert length_longest_no_repeat("") == 0
     print("sliding_window OK")

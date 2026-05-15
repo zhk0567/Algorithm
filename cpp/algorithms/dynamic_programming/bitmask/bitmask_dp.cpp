@@ -6,6 +6,7 @@ const long long INF = (long long)4e18;
 
 long long tsp(const vector<vector<long long>>& dist) {
     int n = (int)dist.size();
+    if (n <= 1) return 0;
     int full = (1 << n) - 1;
     vector<vector<long long>> dp(1 << n, vector<long long>(n, INF));
     dp[1][0] = 0;
@@ -28,6 +29,7 @@ int main() {
     const long long X = (long long)1e9;
     vector<vector<long long>> d = {{0, 2, 9, X}, {1, 0, 6, 4}, {15, 7, 0, 8}, {6, 3, 12, 0}};
     assert(tsp(d) == 21);
+    assert(tsp({{0}}) == 0);
     cout << "bitmask_dp OK" << endl;
     return 0;
 }

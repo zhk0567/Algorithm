@@ -71,4 +71,9 @@ if __name__ == "__main__":
     sq.enqueue("a")
     sq.enqueue("b")
     assert sq.dequeue() == "a"
+    try:
+        StackQueue().dequeue()
+        raise AssertionError("expected IndexError")
+    except IndexError:
+        pass
     print("Queue OK")

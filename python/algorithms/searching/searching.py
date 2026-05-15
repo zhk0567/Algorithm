@@ -75,4 +75,7 @@ if __name__ == "__main__":
     assert lower_bound(a, 3) == 1 and upper_bound(a, 3) == 3
     rot = [4, 5, 6, 7, 0, 1, 2]
     assert search_rotated(rot, 0) == 4
+    assert linear_search([], 1) == -1
+    assert lower_bound([], 3) == 0 and upper_bound([], 3) == 0
+    assert search_rotated([7], 7) == 0
     print("searching OK")

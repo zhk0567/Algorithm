@@ -99,4 +99,17 @@ if __name__ == "__main__":
     assert ms.get_min() == 1
     ms.pop()
     assert ms.get_min() == 2
+    for factory in (ArrayStack, LinkedStack):
+        s = factory()
+        try:
+            s.pop()
+            raise AssertionError("expected IndexError")
+        except IndexError:
+            pass
+    ms2 = MinStack()
+    try:
+        ms2.get_min()
+        raise AssertionError("expected IndexError")
+    except IndexError:
+        pass
     print("Stack OK")

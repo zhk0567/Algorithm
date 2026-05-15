@@ -65,4 +65,10 @@ if __name__ == "__main__":
     assert d.pop_front() == 0
     assert d.pop_back() == 2
     assert d.pop_front() == 1
+    d2 = CircularDeque(4)
+    try:
+        d2.pop_front()
+        raise AssertionError("expected IndexError")
+    except IndexError:
+        pass
     print("Deque OK")

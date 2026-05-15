@@ -1,4 +1,4 @@
-"""数论：gcd、扩展欧几里得、模幂、埃氏筛。"""
+"""数论：gcd、埃氏筛（模幂与扩欧见 fast_power / extended_gcd）。"""
 
 from __future__ import annotations
 
@@ -7,25 +7,6 @@ def gcd(a: int, b: int) -> int:
     while b:
         a, b = b, a % b
     return abs(a)
-
-
-def extgcd(a: int, b: int) -> tuple[int, int, int]:
-    """返回 (g,x,y) 满足 ax+by=g=gcd(a,b)。"""
-    if b == 0:
-        return a, 1, 0
-    g, x1, y1 = extgcd(b, a % b)
-    return g, y1, x1 - (a // b) * y1
-
-
-def mod_pow(a: int, e: int, mod: int) -> int:
-    r = 1 % mod
-    a %= mod
-    while e:
-        if e & 1:
-            r = (r * a) % mod
-        a = (a * a) % mod
-        e >>= 1
-    return r
 
 
 def sieve(n: int) -> list[bool]:
@@ -44,9 +25,8 @@ def sieve(n: int) -> list[bool]:
 
 if __name__ == "__main__":
     assert gcd(54, 24) == 6
-    g, x, y = extgcd(35, 15)
-    assert g == 5 == 35 * x + 15 * y
-    assert mod_pow(7, 10, 13) == 4
     sp = sieve(30)
     assert sum(sp) == 10  # primes <=30 count
+    assert len(sieve(0)) == 1 and not sieve(0)[0]
+    assert sum(sieve(1)) == 0
     print("number_theory OK")

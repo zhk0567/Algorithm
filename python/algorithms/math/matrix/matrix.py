@@ -4,6 +4,8 @@ from __future__ import annotations
 
 
 def mat_mul(a: list[list[int]], b: list[list[int]], mod: int) -> list[list[int]]:
+    if not a or not b:
+        raise ValueError("empty matrix")
     n = len(a)
     m = len(b[0])
     k = len(b)
@@ -19,6 +21,10 @@ def mat_mul(a: list[list[int]], b: list[list[int]], mod: int) -> list[list[int]]
 
 def mat_pow(mat: list[list[int]], e: int, mod: int) -> list[list[int]]:
     n = len(mat)
+    if n == 0:
+        if e == 0:
+            return []
+        raise ValueError("empty matrix")
     res = [[1 if i == j else 0 for j in range(n)] for i in range(n)]
     base = [row[:] for row in mat]
     while e:
@@ -41,4 +47,12 @@ if __name__ == "__main__":
     mod = 10**9 + 7
     assert fib(10, mod) == 55
     assert fib(100, mod) == 687995182
+    f = [[1, 1], [1, 0]]
+    eye = mat_pow(f, 0, mod)
+    assert eye == [[1, 0], [0, 1]]
+    try:
+        mat_pow([], 1, mod)
+        raise AssertionError("expected ValueError")
+    except ValueError:
+        pass
     print("matrix OK")

@@ -17,6 +17,7 @@ struct UF {
 };
 
 int kruskal(int n, vector<array<int, 3>> edges) {
+    if (n <= 1) return 0;
     sort(edges.begin(), edges.end(), [](auto& a, auto& b) { return a[2] < b[2]; });
     UF uf(n);
     int tot = 0, cnt = 0;
@@ -26,12 +27,19 @@ int kruskal(int n, vector<array<int, 3>> edges) {
             if (++cnt == n - 1) break;
         }
     }
+    if (cnt < n - 1) throw runtime_error("graph is not connected");
     return tot;
 }
 
 int main() {
     vector<array<int, 3>> e{{0, 1, 4}, {1, 2, 3}, {0, 2, 2}};
     assert(kruskal(3, e) == 5);
+    assert(kruskal(1, {}) == 0);
+    try {
+        kruskal(2, {});
+        assert(false);
+    } catch (const runtime_error&) {
+    }
     cout << "mst OK" << endl;
     return 0;
 }

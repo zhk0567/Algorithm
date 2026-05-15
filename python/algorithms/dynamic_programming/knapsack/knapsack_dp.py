@@ -25,4 +25,5 @@ if __name__ == "__main__":
     val = [6, 10, 12]
     assert knapsack_01(w, val, 5) == 22
     assert knapsack_unbounded([1, 3, 4], [15, 50, 60], 8) == 130
+    assert knapsack_01([], [], 0) == 0
     print("knapsack_dp OK")

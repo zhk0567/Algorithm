@@ -1,6 +1,6 @@
 # 维护脚本
 
-规范、目录与单题模板见 **[../docs/doc-handbook.md](../docs/doc-handbook.md)**；**未完成待办**见 **[../docs/doc-tasks.md](../docs/doc-tasks.md)**。
+规范、目录与单题模板见 **[../docs/doc-handbook.md](../docs/doc-handbook.md)**；**未完成待办**见 **[../docs/doc-tasks.md](../docs/doc-tasks.md)**；**算法/结构覆盖总表**见 **[../docs/algorithm-coverage.md](../docs/algorithm-coverage.md)**。
 
 | 脚本 | 作用 |
 |------|------|

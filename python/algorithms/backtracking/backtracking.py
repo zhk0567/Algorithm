@@ -92,4 +92,7 @@ if __name__ == "__main__":
     perms = {tuple(p) for p in permute([1, 2, 3])}
     assert len(perms) == 6
     assert n_queens(4) == 2
+    assert subsets([]) == [[]]
+    assert combinations(3, 0) == [[]]
+    assert permute([]) == [[]]
     print("backtracking OK")

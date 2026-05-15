@@ -15,7 +15,7 @@ def make_nck(max_n: int):
         ifac[i - 1] = ifac[i] * i % MOD
 
     def nck(n: int, k: int) -> int:
-        if k < 0 or k > n:
+        if k < 0 or k > n or n > max_n:
             return 0
         return fac[n] * ifac[k] % MOD * ifac[n - k] % MOD
 
@@ -26,4 +26,6 @@ if __name__ == "__main__":
     _, nck = make_nck(100)
     assert nck(5, 2) == 10
     assert nck(6, 3) == 20
+    assert nck(5, 10) == 0
+    assert nck(101, 50) == 0
     print("combinatorics OK")

@@ -3,6 +3,7 @@
 using namespace std;
 
 int edmonds_karp(vector<vector<int>> g, int s, int t) {
+    if (s == t) return 0;
     int n = (int)g.size();
     int flow = 0;
     while (true) {
@@ -40,6 +41,9 @@ int main() {
     cap[1][3] = 2;
     cap[2][3] = 3;
     assert(edmonds_karp(cap, 0, 3) == 5);
+    vector<vector<int>> z(3, vector<int>(3, 0));
+    assert(edmonds_karp(z, 0, 2) == 0);
+    assert(edmonds_karp(z, 0, 0) == 0);
     cout << "network_flow OK" << endl;
     return 0;
 }

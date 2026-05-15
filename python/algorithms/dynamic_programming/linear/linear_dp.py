@@ -59,4 +59,7 @@ if __name__ == "__main__":
     assert longest_common_subsequence("abcde", "ace") == 3
     assert edit_distance("horse", "ros") == 3
     assert house_robber([2, 7, 9, 3, 1]) == 12
+    assert length_of_lis([]) == 0
+    assert longest_common_subsequence("", "") == 0
+    assert house_robber([]) == 0 and house_robber([5]) == 5
     print("linear_dp OK")

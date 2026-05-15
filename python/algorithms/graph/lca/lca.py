@@ -57,4 +57,7 @@ if __name__ == "__main__":
     assert t.lca(1, 3) == 0
     assert t.lca(1, 2) == 0
     assert t.lca(0, 4) == 0
+    assert t.lca(2, 2) == 2
+    t1 = BinaryLiftingLCA(1, [], 0)
+    assert t1.lca(0, 0) == 0
     print("lca OK")

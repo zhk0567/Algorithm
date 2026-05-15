@@ -73,5 +73,13 @@ if __name__ == "__main__":
     assert h.pop() == 1
     assert h.pop() == 3
     h2 = heapify_inplace([4, 10, 3, 5, 1])
-    assert h2.pop() == 1
+    assert(h2.pop() == 1)
+    h3 = MinHeap()
+    try:
+        h3.pop()
+        raise AssertionError("expected IndexError")
+    except IndexError:
+        pass
+    h3.push(42)
+    assert h3.pop() == 42
     print("Heap OK")

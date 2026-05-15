@@ -44,4 +44,6 @@ def kmp_search(text: str, pat: str) -> list[int]:
 if __name__ == "__main__":
     assert build_lps("ababaca") == [0, 0, 1, 2, 3, 0, 1]
     assert kmp_search("ababcababa", "aba") == [0, 5, 7]
+    assert kmp_search("abc", "xyz") == []
+    assert kmp_search("abc", "") == [0, 1, 2, 3]
     print("string OK")

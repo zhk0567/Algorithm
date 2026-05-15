@@ -25,7 +25,7 @@ struct Comb {
         for (int i = n; i >= 1; --i) ifac[i - 1] = ifac[i] * i % MOD;
     }
     long long C(int nn, int k) const {
-        if (k < 0 || k > nn) return 0;
+        if (k < 0 || k > nn || nn > n) return 0;
         return fac[nn] * ifac[k] % MOD * ifac[nn - k] % MOD;
     }
 };
@@ -34,6 +34,8 @@ int main() {
     Comb cb(100);
     assert(cb.C(5, 2) == 10);
     assert(cb.C(6, 3) == 20);
+    assert(cb.C(5, 10) == 0);
+    assert(cb.C(101, 50) == 0);
     cout << "combinatorics OK" << endl;
     return 0;
 }

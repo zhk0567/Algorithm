@@ -1,5 +1,7 @@
 # 算法分类（Python）
 
+> **全库覆盖盘点**（含缺口队列）：[算法覆盖总表](../../docs/algorithm-coverage.md)。
+
 | 子目录 | 内容 |
 |--------|------|
 | `sorting/` | 冒泡、选择、插入、归并、快排、堆排、计数、基数、桶 |
@@ -13,7 +15,7 @@
 | `sliding_window/` | 滑动窗口 |
 | `prefix_sum/` | 前缀和、差分 |
 | `bit_manipulation/` | 位运算 |
-| `graph/` | 遍历、最短路、MST、拓扑、强连通、网络流、[树上 LCA](graph/lca/) |
+| `graph/` | 遍历、最短路、MST、拓扑、强连通、网络流、二分图匹配、[树上 LCA](graph/lca/) |
 | `string/` | KMP 等 |
 | `math/` | 数论、组合、矩阵、几何、概率 |
 | `advanced/` | 分块 [`sqrt_decomposition`](advanced/sqrt_decomposition.py)、[莫队](advanced/mo_algorithm/) |
@@ -32,7 +34,7 @@
 | `sliding_window/` | `sliding_window.py` |
 | `prefix_sum/` | `prefix_sum.py` |
 | `bit_manipulation/` | `bit_manipulation.py` |
-| `string/` | `string_algorithms.py` |
+| `string/` | `string_algorithms.py`、`z_algorithm.py`、`manacher.py`、`ac_automaton.py` |
 | `advanced/` | `sqrt_decomposition.py`、`advanced/mo_algorithm/mo_algorithm.py` |
 | `dynamic_programming/linear/` | `linear_dp.py` |
 | `dynamic_programming/interval/` | `interval_dp.py` |
@@ -41,13 +43,16 @@
 | `dynamic_programming/bitmask/` | `bitmask_dp.py` |
 | `dynamic_programming/knapsack/` | `knapsack_dp.py` |
 | `graph/traversal/` | `graph_traversal.py` |
-| `graph/shortest_path/` | `dijkstra.py` |
-| `graph/mst/` | `kruskal.py` |
+| `graph/shortest_path/` | `dijkstra.py`、`bellman_ford.py`、`floyd_warshall.py` |
+| `graph/mst/` | `kruskal.py`、`prim.py` |
 | `graph/topological_sort/` | `kahn.py` |
 | `graph/scc/` | `tarjan.py` |
 | `graph/network_flow/` | `edmonds_karp.py` |
+| `graph/bipartite_matching/` | `bipartite_matching.py` |
 | `graph/lca/` | `lca.py` |
 | `math/number_theory/` | `number_theory.py` |
+| `math/fast_power/` | `fast_power.py` |
+| `math/extended_gcd/` | `extended_gcd.py` |
 | `math/combinatorics/` | `combinatorics.py` |
 | `math/matrix/` | `matrix.py` |
 | `math/geometry/` | `geometry.py` |

@@ -31,4 +31,7 @@ if __name__ == "__main__":
     g[1].append(2)
     t = topological_sort(g)
     assert t is not None and t == [0, 1, 2]
+    g_cycle = [[1], [0], []]
+    assert topological_sort(g_cycle) is None
+    assert topological_sort([[]]) == [0]
     print("topological_sort OK")

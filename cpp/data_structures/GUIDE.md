@@ -29,7 +29,7 @@
 - [x] `advanced/bloom_filter` — `bloom_filter.cpp`
 - [x] `advanced/lru_cache` — `lru_cache.cpp`
 
-各子目录 `GUIDE.md` 含单文件编译命令（需 MinGW/GCC 的 `g++`，且支持 `bits/stdc++.h`）。
+各子目录 `GUIDE.md` 含单文件编译命令（`g++` 或 MSVC，统一头 `cpp/include/alg_std.hpp`）。
 
 **通用编译**（在任意 `.cpp` 所在目录）：
 
@@ -38,4 +38,4 @@ g++ -std=c++17 -O2 -Wall -Wextra -o run.exe <文件名>.cpp
 .\run.exe
 ```
 
-若本机未安装 `g++`，可将代码复制到支持 `bits/stdc++.h` 的在线 GCC 环境验证。
+若本机未安装 `g++`，见 [docs/cpp-toolchain.md](../../docs/cpp-toolchain.md)。

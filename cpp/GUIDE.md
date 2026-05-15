@@ -8,8 +8,8 @@
 单文件编译示例（在题目目录下）：
 
 ```powershell
-g++ -std=c++17 -O2 -Wall -Wextra -o run.exe solution.cpp
+g++ -std=c++17 -O2 -Wall -Wextra -I cpp/include -o run.exe solution.cpp
 .\run.exe
 ```
 
-多线程示例需加 `-pthread`。若环境无 `g++`，可使用 MinGW-w64 或 MSVC `cl`（需自行调整命令）。
+使用 `#include <alg_std.hpp>`，详见 [docs/cpp-toolchain.md](../docs/cpp-toolchain.md)。多线程示例需加 `-pthread`。

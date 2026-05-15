@@ -1,5 +1,5 @@
 // 数论：gcd、埃氏筛（模幂与扩欧见 fast_power / extended_gcd）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

@@ -95,12 +95,15 @@
 
 ## 四、刷题索引（与 `leetcode/` 对齐）
 
-专题到题号的「示例映射」维护在：
+专题到题号的映射维护在（**仅链仓库内已有题解**）：
 
-- [`python/algorithms/notes.md`](../python/algorithms/notes.md) § 子目录 ↔ 刷题索引  
-- [`cpp/algorithms/notes.md`](../cpp/algorithms/notes.md) 同构表  
+| 侧 | 文档 |
+|----|------|
+| 算法范式 | [`python/algorithms/notes.md`](../python/algorithms/notes.md) § 子目录 ↔ 刷题索引 |
+| 数据结构 | [`python/data_structures/notes.md`](../python/data_structures/notes.md) § 子目录 ↔ 刷题索引 |
+| C++ | [`cpp/algorithms/notes.md`](../cpp/algorithms/notes.md) 同构表 |
 
-新专题落地后，请在本节**追加一行**或在上述 `notes.md` 中增链，避免脱节。
+新专题落地后，请在上述 `notes.md` 增行，避免与 §一/§二 脱节。
 
 ---
 

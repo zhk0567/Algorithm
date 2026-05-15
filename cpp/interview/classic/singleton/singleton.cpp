@@ -1,5 +1,5 @@
 // 单例模式：Meyers / call_once / 双检锁
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 #include <thread>
 #include <mutex>

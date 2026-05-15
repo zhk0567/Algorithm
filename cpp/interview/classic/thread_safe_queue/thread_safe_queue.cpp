@@ -1,5 +1,5 @@
 // 线程安全有界阻塞队列：mutex + 两个 condition_variable
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 #include <thread>
 #include <mutex>

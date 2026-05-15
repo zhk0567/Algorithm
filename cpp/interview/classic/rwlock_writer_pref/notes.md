@@ -1,6 +1,8 @@
 # 读写锁（写者优先，C++）
 
-与 [Python 版](../../../../python/interview/classic/rwlock_writer_pref/) 对照。
+与 [Python 版](../../../python/interview/classic/rwlock_writer_pref/) 对照。
+
+> **面试要点**：见 [Python 版 notes.md](../../../python/interview/classic/rwlock_writer_pref/notes.md)。
 
 ## 编译运行
 

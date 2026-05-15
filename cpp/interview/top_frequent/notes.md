@@ -1,7 +1,9 @@
 # 高频题索引（链回 `problems/leetcode/`）
 
-> 与 Python 版 [top_frequent/notes.md](../../../python/interview/top_frequent/notes.md) 内容一致；路径为 `../../problems/leetcode/<目录>/`。  
-> **维护**：以 Python 版为主副本；增删题目时两文件请同步修改。仓库根执行 `python scripts/check_top_frequent_leetcode.py` 校验链接与两表一致。
+> **题单冻结 v1 = 103 题**（详见 [Python 版](../../../python/interview/top_frequent/notes.md) 文首；扩题须先改 [doc-tasks.md](../../../docs/doc-tasks.md) 并升级版本号）。
+
+> 与 Python 版内容一致；路径为 `../../problems/leetcode/<目录>/`。  
+> **维护**：以 Python 版为主副本；结构性增删须 py/cpp 同步。仓库根执行 `python scripts/check_top_frequent_leetcode.py` 校验。
 
 ## 链表
 
@@ -56,6 +58,7 @@
 | 题号 | 题目 | 目录 |
 |------|------|------|
 | 5 | Longest Palindromic Substring | [`0005_longest_palindromic_substring`](../../problems/leetcode/0005_longest_palindromic_substring/) |
+| 647 | Palindromic Substrings | [`0647_palindromic_substrings`](../../problems/leetcode/0647_palindromic_substrings/) |
 | 6 | Zigzag Conversion | [`0006_zigzag_conversion`](../../problems/leetcode/0006_zigzag_conversion/) |
 | 8 | String to Integer (atoi) | [`0008_string_to_integer_atoi`](../../problems/leetcode/0008_string_to_integer_atoi/) |
 | 14 | Longest Common Prefix | [`0014_longest_common_prefix`](../../problems/leetcode/0014_longest_common_prefix/) |
@@ -96,6 +99,27 @@
 | 79 | Word Search | [`0079_word_search`](../../problems/leetcode/0079_word_search/) |
 | 200 | Number of Islands | [`0200_number_of_islands`](../../problems/leetcode/0200_number_of_islands/) |
 | 207 | Course Schedule | [`0207_course_schedule`](../../problems/leetcode/0207_course_schedule/) |
+| 994 | Rotting Oranges | [`0994_rotting_oranges`](../../problems/leetcode/0994_rotting_oranges/) |
+| 785 | Is Graph Bipartite? | [`0785_is_graph_bipartite`](../../problems/leetcode/0785_is_graph_bipartite/) |
+| 684 | Redundant Connection | [`0684_redundant_connection`](../../problems/leetcode/0684_redundant_connection/) |
+| 1135 | Connecting Cities With Minimum Cost | [`1135_connecting_cities_with_minimum_cost`](../../problems/leetcode/1135_connecting_cities_with_minimum_cost/) |
+| 1584 | Min Cost to Connect All Points | [`1584_min_cost_to_connect_all_points`](../../problems/leetcode/1584_min_cost_to_connect_all_points/) |
+
+## 与本仓库 `algorithms/` 对照
+
+| 仓库专题 | 路径 | 示例题号 |
+|----------|------|----------|
+| 图 BFS/DFS | [`algorithms/graph/traversal/`](../../algorithms/graph/traversal/) | 0200、0994、0542 |
+| 拓扑排序 | [`algorithms/graph/topological_sort/`](../../algorithms/graph/topological_sort/) | 0207、0210 |
+| 最短路 | [`algorithms/graph/shortest_path/`](../../algorithms/graph/shortest_path/) | 0743、0787 |
+| 强连通 / 桥 | [`algorithms/graph/scc/`](../../algorithms/graph/scc/) | 1192 |
+| MST（Kruskal / Prim） | [`algorithms/graph/mst/`](../../algorithms/graph/mst/) | 1135、1584 |
+| 并查集 | [`data_structures/graph/disjoint_set/`](../../data_structures/graph/disjoint_set/) | 0684、1135、0200 |
+| 二分图 / 匹配 | [`algorithms/graph/bipartite_matching/`](../../algorithms/graph/bipartite_matching/) | 0785 |
+| 树上 LCA | [`algorithms/graph/lca/`](../../algorithms/graph/lca/) | 0236 |
+| 字符串 KMP / 回文 | [`algorithms/string/`](../../algorithms/string/) | 0028、0647 |
+| 背包 DP | [`algorithms/dynamic_programming/knapsack/`](../../algorithms/dynamic_programming/knapsack/) | 0322 |
+| 快速幂 / 模逆 | [`algorithms/math/fast_power/`](../../algorithms/math/fast_power/)、[`extended_gcd/`](../../algorithms/math/extended_gcd/) | — |
 
 ## 回溯 / 动态规划
 

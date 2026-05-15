@@ -2,6 +2,8 @@
 
 与 [Python 参考实现](../../../python/interview/classic/lockfree_stack/)（`treiber_ref.py`，带锁）对照阅读。
 
+> **面试要点**：见 [Python 版 notes.md](../../../python/interview/classic/lockfree_stack/notes.md)。
+
 ## 编译运行
 
 ```powershell

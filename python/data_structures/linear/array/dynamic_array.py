@@ -74,4 +74,15 @@ if __name__ == "__main__":
     assert a.at(1) == 2
     assert a.pop_back() == 3
     assert len(a) == 2
+    empty = DynamicArray()
+    try:
+        empty.pop_back()
+        raise AssertionError("expected IndexError")
+    except IndexError:
+        pass
+    try:
+        empty.at(0)
+        raise AssertionError("expected IndexError")
+    except IndexError:
+        pass
     print("DynamicArray OK", list(a.at(i) for i in range(len(a))))

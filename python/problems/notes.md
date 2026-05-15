@@ -11,4 +11,4 @@
 
 每题：`notes.md`（可按 [docs/doc-handbook.md#problem-notes-template](../../docs/doc-handbook.md#problem-notes-template)）+ `solution.py`。
 
-**第三阶段进度**：`leetcode/` 已含多题双语言范例，可按上表增量追加。
+**归档**：`leetcode/` **119** 题（阶段 A–C）；`offer/`、`codetop/` 各 **30** 行索引（阶段 D，只链 `leetcode/`）。余下见 [docs/doc-tasks.md](../../docs/doc-tasks.md) 阶段 E–F。

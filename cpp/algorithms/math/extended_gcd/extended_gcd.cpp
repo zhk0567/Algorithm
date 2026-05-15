@@ -1,5 +1,5 @@
 // 扩展欧几里得：模逆与线性同余
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

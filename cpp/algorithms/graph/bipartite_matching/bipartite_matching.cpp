@@ -1,5 +1,5 @@
 // 二分图匹配：Kuhn 最大匹配 + 匈牙利最小费用完美匹配
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

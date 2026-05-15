@@ -1,5 +1,5 @@
 // 令牌桶限流器
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 #include <mutex>
 #include <thread>

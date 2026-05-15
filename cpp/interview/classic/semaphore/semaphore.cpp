@@ -1,5 +1,5 @@
 // 手写计数信号量：mutex + condition_variable（C++17）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 #include <chrono>
 #include <condition_variable>

@@ -43,4 +43,5 @@ if __name__ == "__main__":
         adj[v].append(u)
     assert dfs_order(adj, 0) == [0, 1, 3, 2]
     assert bfs_order(adj, 0) == [0, 1, 2, 3]
+    assert dfs_order([[]], 0) == [0]
     print("graph_traversal OK")

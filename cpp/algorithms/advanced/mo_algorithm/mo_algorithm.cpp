@@ -1,5 +1,5 @@
 // 莫队：区间不同元素个数（与 Python 版同构）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

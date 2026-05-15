@@ -2,6 +2,8 @@
 
 与 [Python 版](../../../python/interview/classic/ring_buffer/) 同语义：`push` 满抛异常、`pop` 空抛异常。
 
+> **面试要点**：见 [Python 版 notes.md](../../../python/interview/classic/ring_buffer/notes.md)。
+
 ## 编译运行
 
 ```powershell

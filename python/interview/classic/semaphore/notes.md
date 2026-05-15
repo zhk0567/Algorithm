@@ -4,8 +4,10 @@
 
 ## 面试要点
 
-- 与互斥锁关系：**初值为 1** 的二元信号量即互斥量语义。
-- `release` 多于 `acquire` 是否允许：本实现允许（计数可大于初值），与 pthread 类似；若需「不得超过上限」可再加 `max` 校验。
+- **适用场景**：资源池（连接数、车位）、限并发、生产者-消费者（空槽/满槽计数）。
+- **复杂度**：`acquire`/`release` O(1)（不计阻塞调度）。
+- **标准库对照**：[`threading.Semaphore`](https://docs.python.org/3/library/threading.html#threading.Semaphore)、[`BoundedSemaphore`](https://docs.python.org/3/library/threading.html#threading.BoundedSemaphore)。
+- **常见坑**：初值为 1 时等价互斥；`release` 次数可大于 `acquire`（本实现允许）；忘记在 `finally` 里 `release`。
 
 ## 复杂度
 

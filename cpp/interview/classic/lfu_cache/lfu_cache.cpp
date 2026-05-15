@@ -1,5 +1,5 @@
 // 手写 LFU Cache（O(1)）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

@@ -140,4 +140,11 @@ if __name__ == "__main__":
     t.delete(20)
     ord_ = t.inorder()
     assert ord_ == sorted(ord_)
+    t.insert(10)
+    assert t.inorder().count(10) == 1
+    try:
+        t.delete(999)
+        raise AssertionError("expected KeyError")
+    except KeyError:
+        pass
     print("AVL OK", ord_)

@@ -2,6 +2,8 @@
 
 **TAS**（Test-And-Set）：`atomic_flag::test_and_set` 返回旧值；为 `false` 时表示成功占有锁，为 `true` 时自旋重试。释放用 `clear`（`memory_order_release`）。
 
+> **面试要点**：见 [Python 版 notes.md](../../../python/interview/classic/tas_spinlock/notes.md)。
+
 ## 编译运行
 
 ```powershell

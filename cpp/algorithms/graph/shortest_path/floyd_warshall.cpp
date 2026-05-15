@@ -1,5 +1,5 @@
 // Floyd–Warshall 全源最短路（可有负权；可判负环）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

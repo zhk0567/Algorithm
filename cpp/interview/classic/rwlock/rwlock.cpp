@@ -1,5 +1,5 @@
 // 读写锁（读者优先）：与 Python 版同构（C++17）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 #include <chrono>
 #include <mutex>

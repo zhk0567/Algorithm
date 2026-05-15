@@ -35,4 +35,6 @@ if __name__ == "__main__":
     t.insert("apple")
     assert t.search("apple") and not t.search("app")
     assert t.starts_with("app")
+    t.insert("")
+    assert t.search("") and t.starts_with("")
     print("Trie OK")

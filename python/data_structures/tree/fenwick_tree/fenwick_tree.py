@@ -52,6 +52,9 @@ if __name__ == "__main__":
     for i, v in enumerate([1, 2, 3, 4, 5]):
         ft.add(i, v)
     assert ft.range_sum(1, 3) == 9
+    ft1 = FenwickTree(1)
+    ft1.add(0, 7)
+    assert ft1.prefix_sum(0) == 7
     rupq = FenwickRUPQ(5)
     rupq.range_add(1, 3, 10)
     assert rupq.point_query(0) == 0

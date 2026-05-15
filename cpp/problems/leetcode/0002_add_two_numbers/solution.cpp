@@ -1,5 +1,5 @@
 // LeetCode 2: Add Two Numbers
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

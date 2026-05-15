@@ -11,4 +11,4 @@
 
 每题：`GUIDE.md` + `solution.cpp`（与 Python 同构目录）。
 
-**第三阶段**：`leetcode/` 已批量落题；其余来源按需建子目录。
+**归档目标**：`leetcode/` **120** 题；分阶段清单见 [docs/doc-tasks.md](../../docs/doc-tasks.md) P1。

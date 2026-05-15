@@ -82,4 +82,8 @@ if __name__ == "__main__":
         sl.insert(k)
     assert sl.search(7) and not sl.search(8)
     assert sl.erase(6) and not sl.search(6)
+    assert not sl.search(1)
+    sl.insert(7)
+    sl.insert(7)
+    assert sl.erase(99) is False
     print("SkipList OK")

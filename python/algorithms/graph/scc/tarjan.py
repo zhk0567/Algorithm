@@ -48,4 +48,5 @@ if __name__ == "__main__":
     g[2].extend([0, 3])
     comps = tarjan_scc(g)
     assert len(comps) == 2
+    assert tarjan_scc([[]]) == [[0]]
     print("scc OK")

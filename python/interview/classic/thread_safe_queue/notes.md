@@ -14,3 +14,10 @@
 ## 自测
 
 `thread_safe_queue.py` 用 4 个生产者 + 4 个消费者总计搬运 4000 个元素，校验总数与无重复。
+
+## 面试要点
+
+- **适用场景**：生产者-消费者、有界背压、线程间安全传递任务。
+- **复杂度**：`put`/`get` 均摊 O(1)；阻塞时让出 CPU。
+- **标准库对照**：[`queue.Queue`](https://docs.python.org/3/library/queue.html)；本实现强调 **双 Condition + while 防虚假唤醒**。
+- **常见坑**：`notify` 与 `wait` 配对错误、用 `if` 代替 `while` 检查条件、满/空边界未在锁内判断。

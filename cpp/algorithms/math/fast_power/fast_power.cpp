@@ -1,5 +1,5 @@
 // 快速幂：二进制幂与模幂
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

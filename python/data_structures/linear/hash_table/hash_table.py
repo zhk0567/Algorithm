@@ -95,4 +95,9 @@ if __name__ == "__main__":
         pass
     else:
         raise AssertionError
+    try:
+        ht.erase(999)
+        raise AssertionError("expected KeyError")
+    except KeyError:
+        pass
     print("HashTable OK", len(ht))

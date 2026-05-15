@@ -1,5 +1,5 @@
 // 定长环形缓冲区（int 示例，可模板化）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

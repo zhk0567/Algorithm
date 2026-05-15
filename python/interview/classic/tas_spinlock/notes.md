@@ -10,3 +10,10 @@ CPython 标准库不向用户暴露与 `atomic_flag` 等价的跨版本原子 CA
 
 - C++ `atomic_flag` 版：[`../../../../cpp/interview/classic/tas_spinlock/`](../../../../cpp/interview/classic/tas_spinlock/)
 - 公平自旋票号：[`../ticket_lock/`](../ticket_lock/)
+
+## 面试要点
+
+- **适用场景**：极短临界区、内核/嵌入式底层、理解 CAS 与缓存一致性。
+- **复杂度**：无竞争 O(1)；高竞争时 **O(竞争度)** 自旋浪费 CPU。
+- **对照**：C++ `std::atomic_flag`；Python 版为**教学用**（大锁模拟），真无锁看 C++ 目录。
+- **常见坑**：**不公平**、缓存行颠簸（多核）、应用层勿长时间占自旋锁；需 **退避**（yield/exponential backoff）。

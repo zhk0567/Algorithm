@@ -118,6 +118,7 @@ class DoublyLinkedList:
 
 if __name__ == "__main__":
     s = SinglyLinkedList()
+    assert s.to_list() == [] and not s.delete_first(1)
     s.append(1)
     s.append(2)
     s.prepend(0)

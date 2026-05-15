@@ -2,6 +2,8 @@
 
 > `std::mutex` + 两个 `std::condition_variable`（非空/非满）；模板化容纳任意类型。
 
+> **面试要点**：见 [Python 版 notes.md](../../../python/interview/classic/thread_safe_queue/notes.md)。
+
 ## 编译运行
 
 ```powershell

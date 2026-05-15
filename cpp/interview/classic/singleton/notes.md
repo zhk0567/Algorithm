@@ -8,6 +8,8 @@
 | `std::call_once` | 显式控制，多用于初始化函数比较复杂时 |
 | 双检锁 | 老式写法，必须用 `std::atomic` 保序，否则 UB |
 
+> **面试要点**：见 [Python 版 notes.md](../../../python/interview/classic/singleton/notes.md)。
+
 ## 编译运行
 
 ```powershell

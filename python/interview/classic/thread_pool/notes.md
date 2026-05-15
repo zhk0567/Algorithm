@@ -11,3 +11,10 @@
 
 - `submit`：O(1) 入队（忽略锁竞争）
 - 空间：O(队列积压 + worker 数)
+
+## 面试要点
+
+- **适用场景**：CPU 密集/IO 密集任务削峰、控制并发度、避免无界创建线程。
+- **口述骨架**：固定 worker 数 + 任务队列 + `submit` / `shutdown`；`shutdown(wait=True)` 应先 `join` 队列再发退出哨兵。
+- **标准库对照**：生产用 [`concurrent.futures.ThreadPoolExecutor`](https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor)。
+- **常见坑**：`shutdown` 后仍 `submit`、任务抛异常未捕获导致 worker 静默、队列无界导致 OOM。

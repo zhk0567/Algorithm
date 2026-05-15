@@ -43,7 +43,8 @@ Algorithm/
 | [gen_hot100_readme.py](../scripts/gen_hot100_readme.py) | 生成 `python/problems/hot100/notes.md` 与 `cpp/problems/hot100/notes.md` |
 | [check_top_frequent_leetcode.py](../scripts/check_top_frequent_leetcode.py) | 校验 `interview/top_frequent/notes.md` 题链与 `leetcode/` 目录及 py/cpp 表一致 |
 | [run_all_python.ps1](../scripts/run_all_python.ps1) | 白名单递归运行带 `__main__` 自测的 Python 模块（默认 classic + data_structures + algorithms；可选 `-IncludeLeetcode`） |
-| [smoke_compile_cpp.ps1](../scripts/smoke_compile_cpp.ps1) | `g++ -c` 编译冒烟：`cpp/interview/classic`、`data_structures`、`algorithms`、`problems/leetcode` |
+| [smoke_compile_cpp.ps1](../scripts/smoke_compile_cpp.ps1) | 默认 `cpp/**` 全树 `g++ -c`（`-I cpp/include`）；`-LinkEntry` 链接运行专题入口；可选 `-Compiler msvc` |
+| [cpp-toolchain.md](cpp-toolchain.md) | C++ 统一头 `alg_std.hpp`、g++/MSVC 编译说明 |
 
 ```powershell
 Set-Location F:\Study\Algorithm
@@ -91,7 +92,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\smoke_compile_cpp.
 - `problems/leetcode/`：Hot 100 已对齐（99 题 Python+C++，LC 175 SQL-only），索引见 `problems/hot100/notes.md`
 - `interview/`：classic（含读写锁/写者优先、Treiber 栈、Ticket Lock、TAS、MPMC 无锁队列 等）+ `top_frequent/`（双语文首含同步说明）；回归可跑 `scripts/run_all_python.ps1` / `scripts/smoke_compile_cpp.ps1`
 
-**未完成工程化待办** → **[doc-tasks.md](doc-tasks.md)**；**算法/数据结构覆盖盘点** → **[algorithm-coverage.md](algorithm-coverage.md)**。
+**未完成待办（含 P1 刷题 120 题封顶规划）** → **[doc-tasks.md](doc-tasks.md)**；**算法/数据结构覆盖盘点** → **[algorithm-coverage.md](algorithm-coverage.md)**。
 
 ---
 
@@ -190,6 +191,10 @@ def dfs(路径, 选择列表):
 
 - DAG 上 Kahn（入度队列）或 DFS 后序染色；有环则无法排出全序。
 
+### 网络流
+
+- **Edmonds–Karp**：BFS 找增广路；`s==t` 时流量为 0；实现见 `algorithms/graph/network_flow/edmonds_karp.*`。
+
 ### 最短路（补充）
 
 - **Bellman–Ford**：松弛 n-1 轮；第 n 轮仍可松弛则从源点可达负环；实现见 `algorithms/graph/shortest_path/bellman_ford.*`（**SPFA** 为其队列优化，最坏仍需谨慎）。
@@ -249,6 +254,7 @@ def dfs(路径, 选择列表):
 | Kruskal MST | O(E log E) | O(E log E) | O(V) |
 | Bellman–Ford（单源） | O(V·E) | O(V·E) | O(V) |
 | Floyd–Warshall（全源） | O(V^3) | O(V^3) | O(V^2) |
+| Edmonds–Karp（最大流） | O(V·E^2) | O(V·E^2) | O(V^2) |
 | 稀疏表 RMQ（静态区间最值） | O(n log n) 预处理 | O(1) 查询 | O(n log n) |
 | 滚动哈希 + 二分 / 双哈希 | O(n) 预处理 | 单次比较 O(1)~O(log n) | O(n) |
 | 莫队（显式 add/remove） | O((n+q)·√n) 量级* | 同上 | O(值域) |
@@ -265,7 +271,7 @@ def dfs(路径, 选择列表):
 
 - 数清 **DP 状态规模**、**回溯分支因子**、**单调栈摊还**。
 - 空间勿忘 **递归栈** 与 **辅助结构**。
-- 写 **`assert` / 自测**时：C++ 若只用 `bits/stdc++.h`，在部分环境需显式 `#include <cassert>`；`assert(含逗号的初始化列表)` 易被宏拆开，宜先赋给临时变量再断言（维护说明见 **[scripts/doc-scripts.md](../scripts/doc-scripts.md)**）。
+- 写 **`assert` / 自测**时：建议 `#include <alg_std.hpp>` 后仍显式 `#include <cassert>`；`assert(含逗号的初始化列表)` 易被宏拆开，宜先赋给临时变量再断言（见 **[cpp-toolchain.md](cpp-toolchain.md)**、**[scripts/doc-scripts.md](../scripts/doc-scripts.md)**）。
 
 ### 边界与反例（专题维护清单）
 

@@ -32,7 +32,7 @@
 - [x] `advanced/bloom_filter` — `bloom_filter.cpp`
 - [x] `advanced/lru_cache` — `lru_cache.cpp`
 
-各子目录 `notes.md` 含单文件编译命令（需 MinGW/GCC 的 `g++`，且支持 `bits/stdc++.h`）。
+各子目录 `notes.md` 含单文件编译命令（`g++` 或 MSVC `cl`，统一头见 [`cpp/include/alg_std.hpp`](../include/alg_std.hpp)）。
 
 **通用编译**（在任意 `.cpp` 所在目录）：
 
@@ -41,4 +41,19 @@ g++ -std=c++17 -O2 -Wall -Wextra -o run.exe <文件名>.cpp
 .\run.exe
 ```
 
-若本机未安装 `g++`，可将代码复制到支持 `bits/stdc++.h` 的在线 GCC 环境验证。
+若本机未安装 `g++`，可用 MSVC（见 [docs/cpp-toolchain.md](../../docs/cpp-toolchain.md)）或在线 C++17 环境，编译时加 `-I cpp/include`。
+
+## 子目录 ↔ 刷题索引（本仓库 `leetcode/`）
+
+> 与 [Python 版](../../python/data_structures/notes.md) 同构。
+
+| 结构 / 专题 | 示例题 |
+|-------------|--------|
+| 链表 | [0206](../problems/leetcode/0206_reverse_linked_list/)、[0160](../problems/leetcode/0160_intersection_of_two_linked_lists/)、[138](../problems/leetcode/0138_copy_list_with_random_pointer/) |
+| 哈希 | [380](../problems/leetcode/0380_insert_delete_getrandom_o1/) |
+| 堆（设计题） | [355](../problems/leetcode/0355_design_twitter/) |
+| Trie | [208](../problems/leetcode/0208_implement_trie/) |
+| LRU | [0146](../problems/leetcode/0146_lru_cache/) |
+| 并查集 | [0200](../problems/leetcode/0200_number_of_islands/) |
+
+算法范式侧索引见 [`algorithms/notes.md`](../algorithms/notes.md)。

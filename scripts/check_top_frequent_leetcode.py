@@ -13,6 +13,9 @@ _LEETCODE_LINK = re.compile(
     re.IGNORECASE,
 )
 
+# top_frequent 题单版本；扩题时先在 docs/doc-tasks.md 升级目标并改此常量
+EXPECTED_SLUG_COUNT = 103
+
 
 def repo_root() -> Path:
     return Path(__file__).resolve().parent.parent
@@ -64,6 +67,14 @@ def main() -> int:
     dup_py = [s for s in set_py if py_slugs.count(s) > 1]
     if dup_py:
         print(f"ERROR: duplicate slugs in python table: {sorted(dup_py)}", file=sys.stderr)
+        return 1
+
+    if len(set_py) != EXPECTED_SLUG_COUNT:
+        print(
+            f"ERROR: top_frequent v1 expects {EXPECTED_SLUG_COUNT} slugs, got {len(set_py)}. "
+            "Update EXPECTED_SLUG_COUNT in this script and doc-tasks.md when bumping the list version.",
+            file=sys.stderr,
+        )
         return 1
 
     err = check_slugs_exist(py_slugs, repo)

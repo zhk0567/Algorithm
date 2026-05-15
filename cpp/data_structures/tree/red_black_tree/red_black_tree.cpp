@@ -1,5 +1,5 @@
 // 红黑树：插入 + 中序（教学实现）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

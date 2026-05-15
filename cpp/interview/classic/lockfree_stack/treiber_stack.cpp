@@ -1,5 +1,5 @@
 // Treiber 无锁栈（最小实现；教学用，未处理 ABA）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 #include <atomic>
 #include <optional>

@@ -51,4 +51,6 @@ if __name__ == "__main__":
     g.add_edge(1, 3)
     assert g.dfs_order(0) == [0, 1, 3, 2]
     assert g.bfs_order(0) == [0, 1, 2, 3]
+    g1 = GraphList(1)
+    assert g1.dfs_order(0) == [0] and g1.bfs_order(0) == [0]
     print("GraphList OK")

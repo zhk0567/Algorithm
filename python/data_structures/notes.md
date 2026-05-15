@@ -33,3 +33,21 @@
 - [x] `advanced/lru_cache` — `lru_cache.py`
 
 每子目录另有 `notes.md`；运行示例：`python <脚本名>.py`。
+
+## 子目录 ↔ 刷题索引（本仓库 `leetcode/`）
+
+| 结构 / 专题 | 示例题 |
+|-------------|--------|
+| 链表 | [0206](../problems/leetcode/0206_reverse_linked_list/)、[0160](../problems/leetcode/0160_intersection_of_two_linked_lists/)、[138](../problems/leetcode/0138_copy_list_with_random_pointer/) |
+| 栈 / 队列（题解侧） | [0084](../problems/leetcode/0084_largest_rectangle_in_histogram/) |
+| 哈希 | [0001](../problems/leetcode/0001_two_sum/)、[380](../problems/leetcode/0380_insert_delete_getrandom_o1/) |
+| 堆（设计题） | [355](../problems/leetcode/0355_design_twitter/) |
+| 堆 | [0215](../problems/leetcode/0215_kth_largest_element_in_an_array/) |
+| 二叉树遍历 | [0104](../problems/leetcode/0104_maximum_depth_of_binary_tree/)（见 `tree/binary_tree`） |
+| BST | [0098](../problems/leetcode/0098_validate_binary_search_tree/) |
+| Trie | [208](../problems/leetcode/0208_implement_trie/) |
+| 线段树 / 树状数组 | 区间题随题单补充（阶段 C 前不强制单列） |
+| LRU | [0146](../problems/leetcode/0146_lru_cache/) |
+| 并查集 | [0200](../problems/leetcode/0200_number_of_islands/)（连通块） |
+
+算法范式侧索引见 [`algorithms/notes.md`](../algorithms/notes.md)。

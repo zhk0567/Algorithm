@@ -11,4 +11,4 @@
 
 每题：`notes.md` + `solution.cpp`（与 Python 同构目录）。
 
-**第三阶段**：`leetcode/` 已批量落题；其余来源按需建子目录。
+**归档**：`leetcode/` **119** 题；`offer/`、`codetop/` 各 **30** 行索引（见 Python 版 `notes.md`）。余下见 [docs/doc-tasks.md](../../docs/doc-tasks.md) 阶段 E–F。

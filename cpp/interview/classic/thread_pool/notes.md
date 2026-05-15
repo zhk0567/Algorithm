@@ -2,6 +2,8 @@
 
 与 [Python 版](../../../python/interview/classic/thread_pool/) 同目标：`enqueue` 投递 `std::function<void()>`，`shutdown` 先 **`wait_idle()`**（队列空且无在执行任务）再停线程。
 
+> **面试要点**：见 [Python 版 notes.md](../../../python/interview/classic/thread_pool/notes.md)。
+
 ## 编译运行
 
 ```powershell

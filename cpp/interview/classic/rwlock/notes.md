@@ -6,6 +6,8 @@
 
 - 写者优先实现：[`../rwlock_writer_pref/`](../rwlock_writer_pref/)
 
+> **面试要点**：见 [Python 版 notes.md](../../../python/interview/classic/rwlock/notes.md)。
+
 ## 编译运行
 
 ```powershell

@@ -2,6 +2,8 @@
 
 **模型**：环形槽数组，每槽 `atomic<size_t> turn` 与载荷；`head` / `tail` 各 `fetch_add` 取槽下标。生产者在 `turn == 2 * lap` 时写入并置 `2*lap+1`；消费者在 `turn == 2*lap+1` 时读出并置 `2*lap+2`。与 [Erik Rigtorp / MPMCQueue](https://github.com/rigtorp/MPMCQueue) 同族（MIT License）。
 
+> **面试要点**：见 [Python 版 notes.md](../../../python/interview/classic/mpmc_queue/notes.md)。
+
 ## 编译运行
 
 ```powershell

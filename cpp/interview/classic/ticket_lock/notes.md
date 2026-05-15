@@ -2,6 +2,8 @@
 
 与 [Python 版](../../../python/interview/classic/ticket_lock/)（`Condition` 实现）对照。
 
+> **面试要点**：见 [Python 版 notes.md](../../../python/interview/classic/ticket_lock/notes.md)。
+
 ## 编译运行
 
 ```powershell

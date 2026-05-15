@@ -1,5 +1,5 @@
 // 简易线程池：mutex + condition_variable + queue<function<void()>>
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 #include <condition_variable>
 #include <functional>

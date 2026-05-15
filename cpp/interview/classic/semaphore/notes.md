@@ -2,6 +2,8 @@
 
 与 [Python 版](../../../python/interview/classic/semaphore/) 同语义。
 
+> **面试要点**：见 [Python 版 notes.md](../../../python/interview/classic/semaphore/notes.md)。
+
 ## 编译运行
 
 ```powershell

@@ -1,5 +1,5 @@
 // Ticket Lock（公平）：atomic 取号 + 自旋等待叫号（教学用，高竞争请加退避）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 #include <atomic>
 #include <thread>

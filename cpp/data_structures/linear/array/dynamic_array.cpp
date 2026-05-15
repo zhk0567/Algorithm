@@ -1,5 +1,5 @@
 // 手写动态数组（封装 vector + 显式扩容演示）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

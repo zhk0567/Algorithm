@@ -1,5 +1,5 @@
 // Prim 最小生成树（邻接表 + 小根堆）
-#include <bits/stdc++.h>
+#include <alg_std.hpp>
 #include <cassert>
 using namespace std;
 

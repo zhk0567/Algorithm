@@ -1,6 +1,6 @@
 # 数据结构（Python）
 
-> **全库覆盖盘点**（与 `algorithms/` 边界、缺口队列）：[算法覆盖总表](../../docs/algorithm-coverage.md)。
+> **全库覆盖盘点**（与 `algorithms/` 边界、缺口队列）：[算法覆盖总表](../../README.md#coverage)。
 
 | 子目录 | 内容 |
 |--------|------|

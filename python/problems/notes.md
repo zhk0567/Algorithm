@@ -9,6 +9,6 @@
 | `hot100/` | Hot 100 索引（链到 `leetcode/` 实题目录） |
 | `luogu/` | 洛谷（OI），建议：`P1001_标题/` 或题号前缀 |
 
-每题：`notes.md`（可按 [docs/doc-handbook.md#problem-notes-template](../../docs/doc-handbook.md#problem-notes-template)）+ `solution.py`。
+每题：`notes.md`（可按 [README#problem-notes-template](../../README.md#problem-notes-template)）+ `solution.py`。
 
-**归档**：`leetcode/` **120** 题（含 **307** 区间结构代表题）；`offer/`、`codetop/` 各 **30** 行索引。维护说明见 [docs/doc-tasks.md](../../docs/doc-tasks.md)。
+**归档**：`leetcode/` **120** 题（含 **307** 区间结构代表题）；`offer/`、`codetop/` 各 **30** 行索引。维护说明见 [README](../../README.md#pending-tasks)。

@@ -107,4 +107,4 @@
 | 99 | 238 | Product of Array Except Self | `../leetcode/0238_product_of_array_except_self/` |
 | 100 | 114 | Flatten Binary Tree to Linked List | `../leetcode/0114_flatten_binary_tree_to_linked_list/` |
 
-新增题目：将 [doc-handbook.md](../../../docs/doc-handbook.md#problem-notes-template) 中 **Problem notes template** 一节抄入本目录 `notes.md`，并添加 `solution.py` / `solution.cpp`，再将上表对应行改为 `../leetcode/.../` 链接。
+新增题目：将 [README · Problem notes template](../../../README.md#problem-notes-template) 一节抄入本目录 `notes.md`，并添加 `solution.py` / `solution.cpp`，再将上表对应行改为 `../leetcode/.../` 链接。

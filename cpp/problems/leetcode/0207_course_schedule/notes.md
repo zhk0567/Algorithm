@@ -9,3 +9,10 @@ Set-Location cpp\problems\leetcode\0207_course_schedule
 g++ -std=c++17 -O2 -Wall -Wextra -o run.exe solution.cpp
 .\run.exe
 ```
+
+## 题面（外链）
+
+- **题号**：207
+- **链接**：<https://leetcode.cn/problems/course-schedule/>
+- （与目录 0207_course_schedule 中 slug 推导一致；题意以官网为准。）
+

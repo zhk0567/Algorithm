@@ -9,6 +9,6 @@
 | `hot100/` | Hot 100 索引（链到 `leetcode/` 实题目录） |
 | `luogu/` | 洛谷（OI），建议：`P1001_标题/` 或题号前缀 |
 
-每题：`GUIDE.md`（可按 [docs/doc-handbook.md#problem-notes-template](../../docs/doc-handbook.md#problem-notes-template)）+ `solution.py`。
+每题：`GUIDE.md`（可按 [README#problem-notes-template](../../README.md#problem-notes-template)）+ `solution.py`。
 
 **第三阶段进度**：`leetcode/` 已含多题双语言范例，可按上表增量追加。

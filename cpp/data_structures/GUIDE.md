@@ -38,4 +38,4 @@ g++ -std=c++17 -O2 -Wall -Wextra -o run.exe <文件名>.cpp
 .\run.exe
 ```
 
-若本机未安装 `g++`，见 [docs/cpp-toolchain.md](../../docs/cpp-toolchain.md)。
+若本机未安装 `g++`，见 [README](../../README.md#cpp-toolchain)。

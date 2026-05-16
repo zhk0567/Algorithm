@@ -1,9 +1,9 @@
 # 高频题索引（链回 `problems/leetcode/`）
 
-> **题单冻结 v1 = 103 题**（与 `scripts/check_top_frequent_leetcode.py` 中 `EXPECTED_SLUG_COUNT` 一致）。本表**不是**开放题池：扩题、删题须先在 [docs/doc-tasks.md](../../../docs/doc-tasks.md) 调整 P1「完成标准」并升级版本号（如 v2），再改 py/cpp 两文件并跑校验脚本。
+> **题单冻结 v1 = 103 题**（文首约定；扩题须同步修改 py/cpp 两份本文件并更新说明）。本表**不是**开放题池：扩题、删题须先在 [README](../../../README.md#pending-tasks) 调整 P1「完成标准」并升级版本号（如 v2），再改 py/cpp 两文件。
 
 > 与仓库内 Hot 100 及专题补充题对齐的分类表，便于面试前按专题过一遍。路径均为 `../../problems/leetcode/<目录>/`。  
-> **维护**：仅修死链/笔误时保持 **103** 题不变；结构性增删与 [C++ 版](../../../cpp/interview/top_frequent/notes.md) **同步**。仓库根执行 `python scripts/check_top_frequent_leetcode.py` 校验 slug 集合、题量与双语言目录。
+> **维护**：仅修死链/笔误时保持 **103** 题不变；结构性增删与 [C++ 版](../../../cpp/interview/top_frequent/notes.md) **同步**。调整后请自行核对 slug 列与 `leetcode/` 目录双端一致。
 
 ## 链表
 

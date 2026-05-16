@@ -9,3 +9,10 @@ Set-Location cpp\problems\leetcode\0105_construct_binary_tree_from_preorder_and_
 g++ -std=c++17 -O2 -Wall -Wextra -o run.exe solution.cpp
 .\run.exe
 ```
+
+## 题面（外链）
+
+- **题号**：105
+- **链接**：<https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/>
+- （与目录 0105_construct_binary_tree_from_preorder_and_inorder_traversal 中 slug 推导一致；题意以官网为准。）
+

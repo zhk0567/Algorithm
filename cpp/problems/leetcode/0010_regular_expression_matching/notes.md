@@ -9,3 +9,10 @@ Set-Location cpp\problems\leetcode\0010_regular_expression_matching
 g++ -std=c++17 -O2 -Wall -Wextra -o run.exe solution.cpp
 .\run.exe
 ```
+
+## 题面（外链）
+
+- **题号**：10
+- **链接**：<https://leetcode.cn/problems/regular-expression-matching/>
+- （与目录 0010_regular_expression_matching 中 slug 推导一致；题意以官网为准。）
+

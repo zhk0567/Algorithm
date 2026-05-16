@@ -1,9 +1,9 @@
 # 高频题索引（链回 `problems/leetcode/`）
 
-> **题单冻结 v1 = 103 题**（详见 [Python 版](../../../python/interview/top_frequent/notes.md) 文首；扩题须先改 [doc-tasks.md](../../../docs/doc-tasks.md) 并升级版本号）。
+> **题单冻结 v1 = 103 题**（详见 [Python 版](../../../python/interview/top_frequent/notes.md) 文首；扩题须先改根目录 [README · Pending tasks](../../../README.md#pending-tasks) 并升级版本号）。
 
 > 与 Python 版内容一致；路径为 `../../problems/leetcode/<目录>/`。  
-> **维护**：以 Python 版为主副本；结构性增删须 py/cpp 同步。仓库根执行 `python scripts/check_top_frequent_leetcode.py` 校验。
+> **维护**：以 Python 版为主副本；结构性增删须 py/cpp 同步。调整后请自行核对 slug 列与 `leetcode/` 目录双端一致。
 
 ## 链表
 

@@ -7,7 +7,7 @@
 | `manacher.cpp` | Manacher |
 | `ac_automaton.cpp` | Aho–Corasick |
 
-与 [Python 版](../../../../python/algorithms/string/) 对照。
+与 [Python 版](../../../python/algorithms/string/) 对照。
 
 ## 编译运行
 

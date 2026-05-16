@@ -9,3 +9,10 @@ Set-Location cpp\problems\leetcode\0041_first_missing_positive
 g++ -std=c++17 -O2 -Wall -Wextra -o run.exe solution.cpp
 .\run.exe
 ```
+
+## 题面（外链）
+
+- **题号**：41
+- **链接**：<https://leetcode.cn/problems/first-missing-positive/>
+- （与目录 0041_first_missing_positive 中 slug 推导一致；题意以官网为准。）
+

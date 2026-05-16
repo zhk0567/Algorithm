@@ -1,6 +1,6 @@
 # 树形 DP
 
-见 `tree_dp.cpp`。
+见 `tree_dp.cpp`。复杂度 / 边界说明见 [Python 版 notes.md](../../../../python/algorithms/dynamic_programming/tree/notes.md)。
 
 ## 编译运行
 

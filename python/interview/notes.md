@@ -5,6 +5,8 @@
 | [`classic/`](classic/) | 手写 LRU、LFU、队列、单例、限流、环形缓冲、线程池、信号量、读写锁、写者优先读写锁、Treiber 栈、Ticket Lock、TAS 自旋锁、MPMC 无锁队列（对拍参考）等 |
 | [`top_frequent/`](top_frequent/) | 高频题按专题索引，链回 [`../problems/leetcode/`](../problems/leetcode/) |
 
+> **并发与无锁（`classic/`）**：下列实现为**教学向**示例，用于口述思路与小规模自测，**不构成**生产环境性能或线程安全承诺；勿将本地对拍结论直接外推为线上压测结论。
+
 ## `classic/` 一览
 
 | 专题 | 路径 |

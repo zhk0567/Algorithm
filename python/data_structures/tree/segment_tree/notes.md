@@ -17,7 +17,7 @@
 
 ## 典型应用
 
-RMQ、区间最值、扫描线辅助。
+RMQ、区间最值、扫描线辅助。仓库题解对照：[LC 307 区域和检索 - 可变](../../../problems/leetcode/0307_range_sum_query_mutable/)（同题亦含树状数组写法，见 `fenwick_tree`）。
 
 ## 代码要点
 

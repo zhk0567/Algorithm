@@ -26,4 +26,4 @@
 
 ## 与 C++
 
-见 [同构目录](../../../../cpp/algorithms/string/)。
+见 [同构目录](../../../cpp/algorithms/string/)。

@@ -11,4 +11,4 @@
 
 每题：`notes.md` + `solution.cpp`（与 Python 同构目录）。
 
-**归档**：`leetcode/` **120** 题；见 [docs/doc-tasks.md](../../docs/doc-tasks.md)。
+**归档**：`leetcode/` **120** 题；见 [README](../../README.md#pending-tasks)。

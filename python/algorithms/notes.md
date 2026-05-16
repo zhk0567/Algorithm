@@ -88,6 +88,7 @@
 | MST / 并查集 | [1135](../problems/leetcode/1135_connecting_cities_with_minimum_cost/)、[1584](../problems/leetcode/1584_min_cost_to_connect_all_points/)、[0684](../problems/leetcode/0684_redundant_connection/) |
 | 回文串 | [005](../problems/leetcode/0005_longest_palindromic_substring/)、[647](../problems/leetcode/0647_palindromic_substrings/) |
 | 树上 LCA | [0236](../problems/leetcode/0236_lowest_common_ancestor_of_a_binary_tree/) |
+| 区间结构（BIT / 线段树） | [307](../problems/leetcode/0307_range_sum_query_mutable/) |
 | 莫队 | 无单一标配题号，见 [`advanced/mo_algorithm/notes.md`](advanced/mo_algorithm/notes.md) |
 
 运行：`python <入口文件>`（在对应目录或带路径执行）。

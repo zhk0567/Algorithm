@@ -1,6 +1,6 @@
 # 仓库手册（目录 · 路线 · 模板）
 
-> **合并说明**：目录约定、学习路线、算法骨架、复杂度与单题写作模板等集中在本页；**未完成待办**单独维护在 **[doc-tasks.md](doc-tasks.md)**（仅列 `[ ]` 项；**算法与数据结构全量整理**为 P0 主线，见该文件）。根目录仍只保留 **[README.md](../README.md)**；子目录说明统一为 **`notes.md`**。
+> **合并说明**：目录约定、学习路线、算法骨架、复杂度与单题写作模板等集中在本页；**未完成待办**单独维护在 **[doc-tasks.md](doc-tasks.md)**（仅列 `[ ]` 项；**算法与数据结构全量整理**为 P0 主线，见该文件）；**封版前大规模可勾选验收**见 **[project-closeout-checklist.md](project-closeout-checklist.md)**。根目录仍只保留 **[README.md](../README.md)**；子目录说明统一为 **`notes.md`**。
 
 ---
 
@@ -14,7 +14,7 @@
 Algorithm/
 ├── README.md              # 全库唯一入口
 ├── .gitignore
-├── docs/                  # 本手册 + [任务清单](doc-tasks.md) + [算法覆盖总表](algorithm-coverage.md)
+├── docs/                  # 本手册 + [任务清单](doc-tasks.md) + [算法覆盖总表](algorithm-coverage.md) + [封版收口清单](project-closeout-checklist.md)
 ├── scripts/               # 维护脚本（如 Hot 100 索引）
 ├── python/                # data_structures / algorithms / problems / interview
 └── cpp/                   # 与 python/ 镜像
@@ -89,10 +89,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\smoke_compile_cpp.
 ### 当前进度（简记）
 
 - `data_structures/`、`algorithms/`：已双语言铺全；**覆盖盘点与缺口队列**见 **[algorithm-coverage.md](algorithm-coverage.md)**
-- `problems/leetcode/`：Hot 100 已对齐（99 题 Python+C++，LC 175 SQL-only），索引见 `problems/hot100/notes.md`
-- `interview/`：classic（含读写锁/写者优先、Treiber 栈、Ticket Lock、TAS、MPMC 无锁队列 等）+ `top_frequent/`（双语文首含同步说明）；回归可跑 `scripts/run_all_python.ps1` / `scripts/smoke_compile_cpp.ps1`
+- `problems/leetcode/`：Hot 100 已对齐（99 题 Python+C++，LC 175 SQL-only），**全库归档约 120** 题双语言，索引见 `problems/hot100/notes.md` 与各专题 `notes.md`
+- `interview/`：classic（含读写锁/写者优先、Treiber 栈、Ticket Lock、TAS、MPMC 无锁队列 等）+ `top_frequent/`（v1=103 题冻结，双语文首同步）；回归可跑 `scripts/run_all_python.ps1` / `scripts/smoke_compile_cpp.ps1`
 
-**未完成待办（含 P1 刷题 120 题封顶规划）** → **[doc-tasks.md](doc-tasks.md)**；**算法/数据结构覆盖盘点** → **[algorithm-coverage.md](algorithm-coverage.md)**。
+**未完成待办** → **[doc-tasks.md](doc-tasks.md)**（P1 配套已收口时可为空表）；**算法/数据结构覆盖盘点** → **[algorithm-coverage.md](algorithm-coverage.md)**。
 
 ---
 

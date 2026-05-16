@@ -11,4 +11,4 @@
 
 每题：`notes.md`（可按 [docs/doc-handbook.md#problem-notes-template](../../docs/doc-handbook.md#problem-notes-template)）+ `solution.py`。
 
-**归档**：`leetcode/` **119** 题（阶段 A–C）；`offer/`、`codetop/` 各 **30** 行索引（阶段 D，只链 `leetcode/`）。余下见 [docs/doc-tasks.md](../../docs/doc-tasks.md) 阶段 E–F。
+**归档**：`leetcode/` **120** 题（含 **307** 区间结构代表题）；`offer/`、`codetop/` 各 **30** 行索引。维护说明见 [docs/doc-tasks.md](../../docs/doc-tasks.md)。

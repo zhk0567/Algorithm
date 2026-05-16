@@ -14,9 +14,9 @@
 
 | 指标 | 基线（当前） | 目标 |
 |------|----------------|------|
-| `problems/leetcode/` 题量 | **119**（阶段 C 已完成；Hot 100 + **19** 道专题补缺） | **119**（阶段 B 网络流不占题号，与规划 120 差 1） |
-| `algorithms/notes` 刷题索引 | 部分专题无例题链 | **每行有链**或写明「无 LeetCode 标配」（仅允许莫队、网络流等） |
-| `data_structures/notes` 刷题索引 | 线段树/树状数组等偏空 | 链表随机指针、Trie 等有代表题 |
+| `problems/leetcode/` 题量 | **120**（含 307 区间结构代表题） | **120** |
+| `algorithms/notes` 刷题索引 | **已完成**（含莫队/网络流说明行 + **307** 区间结构） | **每行有链**或写明「无 LeetCode 标配」 |
+| `data_structures/notes` 刷题索引 | **已完成**（含 **307** 线段树/树状数组） | 各结构均有代表题链 |
 | `interview/top_frequent/` | **冻结 v1（103）**（阶段 E 已完成） | 扩题须先改本表并升级 `EXPECTED_SLUG_COUNT` |
 | `problems/offer/`、`codetop/` | **30+30** 行索引（阶段 D 已完成） | 各 **30 行**映射（≥90% 链到已有 `leetcode/`） |
 | `interview/classic/` | **14** 份 `notes.md` 含「面试要点」（阶段 F 已完成） | 同上 |
@@ -31,4 +31,13 @@
 
 **P2 工具链**（`alg_std.hpp`、MSVC 冒烟参数）已落地，见 [cpp-toolchain.md](cpp-toolchain.md)。
 
-**P1 配套**（阶段 A–F：专题题解、offer/codetop 索引、top_frequent v1、classic 面试要点）已落地；`doc-tasks.md` 无剩余 `[ ]` 项时可视为 P1 收口。
+**P1 配套**已落地；**封版前**请按 [project-closeout-checklist.md](project-closeout-checklist.md) 逐项验收。
+
+---
+
+## 项目收口（封版前）
+
+- [ ] 完成 [project-closeout-checklist.md](project-closeout-checklist.md) **§〇～§十四**（含 LeetCode 双端目录 CSV 三文件齐套验收）
+- [ ] （可选）继续完成该清单 **§十五～§二十五** 扩展闸后再打发行 tag / 写 CHANGELOG
+
+---

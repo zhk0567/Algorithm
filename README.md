@@ -9,11 +9,11 @@
 | 约定 | 说明 |
 |------|------|
 | **唯一 `README.md`** | 全仓库只在**本根目录**保留 `README.md`；其余任何子目录的说明文件一律命名为 **`notes.md`**（Markdown）。 |
-| **`docs/` 文档** | **[doc-handbook.md](docs/doc-handbook.md)**（目录·路线·模板）；**[doc-tasks.md](docs/doc-tasks.md)**（**仅未完成**；**P0=算法全量整理**）；**[algorithm-coverage.md](docs/algorithm-coverage.md)**（**覆盖盘点 + 缺口队列**）。 |
+| **`docs/` 文档** | **[doc-handbook.md](docs/doc-handbook.md)**（目录·路线·模板）；**[doc-tasks.md](docs/doc-tasks.md)**（**仅未完成**；**P0=算法全量整理**）；**[algorithm-coverage.md](docs/algorithm-coverage.md)**（**覆盖盘点 + 缺口队列**）；**[project-closeout-checklist.md](docs/project-closeout-checklist.md)**（**封版前大规模验收**）。 |
 | **题目目录** | LeetCode 等：`python/problems/leetcode/<四位编号>_<snake_case>/` 与 `cpp/...` 对称；每题 **`notes.md` + `solution.py` / `solution.cpp`**（末尾自带简单断言或样例）；SQL 题为 `solution.sql`。 |
 | **Hot 100 索引** | 点赞序题单表由脚本生成，见 `python/problems/hot100/notes.md` 与 `cpp/problems/hot100/notes.md`（与题号数值顺序无关）。 |
 
-仓库说明、学习路线、算法骨架、复杂度与**单题写作模板**见 **[docs/doc-handbook.md](docs/doc-handbook.md)**；**未完成待办（P0）**见 **[docs/doc-tasks.md](docs/doc-tasks.md)**；**算法/数据结构覆盖总表**见 **[docs/algorithm-coverage.md](docs/algorithm-coverage.md)**。
+仓库说明、学习路线、算法骨架、复杂度与**单题写作模板**见 **[docs/doc-handbook.md](docs/doc-handbook.md)**；**未完成待办**见 **[docs/doc-tasks.md](docs/doc-tasks.md)**；**算法/数据结构覆盖总表**见 **[docs/algorithm-coverage.md](docs/algorithm-coverage.md)**；**封版收口总清单（大规模可勾选）**见 **[docs/project-closeout-checklist.md](docs/project-closeout-checklist.md)**。
 
 ---
 
@@ -22,7 +22,7 @@
 ```
 Algorithm/
 ├── README.md          ← 你正在阅读的唯一仓库入口
-├── docs/              ← [doc-handbook.md](docs/doc-handbook.md) + [doc-tasks.md](docs/doc-tasks.md) + [algorithm-coverage.md](docs/algorithm-coverage.md)
+├── docs/              ← [doc-handbook.md](docs/doc-handbook.md) + [doc-tasks.md](docs/doc-tasks.md) + [algorithm-coverage.md](docs/algorithm-coverage.md) + [project-closeout-checklist.md](docs/project-closeout-checklist.md)
 ├── scripts/           ← 维护与回归（Hot100、top_frequent 校验、run_all_python、smoke_compile_cpp 等）
 ├── python/            ← Python：data_structures / algorithms / problems / interview
 └── cpp/               ← C++：与 python/ 同构
@@ -76,7 +76,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\smoke_compile_cpp.
 | Hot 100 点赞序索引 | [python/problems/hot100/notes.md](python/problems/hot100/notes.md) |
 | 手写专题（含 Treiber / Ticket Lock / 写者优先 RWLock / TAS / MPMC 无锁队列 等） | [python/interview/notes.md](python/interview/notes.md) |
 | 覆盖盘点（P0） | [docs/algorithm-coverage.md](docs/algorithm-coverage.md) |
-| 未完成待办 | [docs/doc-tasks.md](docs/doc-tasks.md) |
+| 未完成待办 / 封版收口 | [docs/doc-tasks.md](docs/doc-tasks.md) · [docs/project-closeout-checklist.md](docs/project-closeout-checklist.md) |
 | 新题 `notes.md` 怎么写 | [docs/doc-handbook.md#problem-notes-template](docs/doc-handbook.md#problem-notes-template) |
 | 学习路线 | [docs/doc-handbook.md#study-roadmap](docs/doc-handbook.md#study-roadmap) |
 

@@ -50,9 +50,14 @@ g++ -std=c++17 -O2 -Wall -Wextra -o run.exe <文件名>.cpp
 | 结构 / 专题 | 示例题 |
 |-------------|--------|
 | 链表 | [0206](../problems/leetcode/0206_reverse_linked_list/)、[0160](../problems/leetcode/0160_intersection_of_two_linked_lists/)、[138](../problems/leetcode/0138_copy_list_with_random_pointer/) |
+| 栈 / 队列（题解侧） | [0084](../problems/leetcode/0084_largest_rectangle_in_histogram/) |
 | 哈希 | [380](../problems/leetcode/0380_insert_delete_getrandom_o1/) |
 | 堆（设计题） | [355](../problems/leetcode/0355_design_twitter/) |
+| 堆 | [0215](../problems/leetcode/0215_kth_largest_element_in_an_array/) |
+| 二叉树遍历 | [0104](../problems/leetcode/0104_maximum_depth_of_binary_tree/) |
+| BST | [0098](../problems/leetcode/0098_validate_binary_search_tree/) |
 | Trie | [208](../problems/leetcode/0208_implement_trie/) |
+| 线段树 / 树状数组 | [307](../problems/leetcode/0307_range_sum_query_mutable/) |
 | LRU | [0146](../problems/leetcode/0146_lru_cache/) |
 | 并查集 | [0200](../problems/leetcode/0200_number_of_islands/) |
 

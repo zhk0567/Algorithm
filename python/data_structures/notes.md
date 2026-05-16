@@ -46,7 +46,7 @@
 | 二叉树遍历 | [0104](../problems/leetcode/0104_maximum_depth_of_binary_tree/)（见 `tree/binary_tree`） |
 | BST | [0098](../problems/leetcode/0098_validate_binary_search_tree/) |
 | Trie | [208](../problems/leetcode/0208_implement_trie/) |
-| 线段树 / 树状数组 | 区间题随题单补充（阶段 C 前不强制单列） |
+| 线段树 / 树状数组 | [307](../problems/leetcode/0307_range_sum_query_mutable/)（单点改 + 区间和；题解用 BIT，可换线段树） |
 | LRU | [0146](../problems/leetcode/0146_lru_cache/) |
 | 并查集 | [0200](../problems/leetcode/0200_number_of_islands/)（连通块） |
 
